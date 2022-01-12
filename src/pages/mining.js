@@ -88,7 +88,7 @@ const Art = styled.img`
 
 const Hero = () => {
     return (
-        <Layout>
+        <Layout pageTitle="Mining">
             <Section>
                 <Container>
                     <ContentWrapper>

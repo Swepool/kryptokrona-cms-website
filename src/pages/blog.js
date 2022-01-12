@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 
 const Blog = () => {
     return(
-        <Layout>
+        <Layout pageTitle="Blog">
             <Section>
                 <Wrapper>
                     <BlogRoll/>

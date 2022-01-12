@@ -7,7 +7,7 @@ import RoadmapSection from "../components/RoadmapSection";
 
 const RoadmapPage = () => {
   return(
-      <Layout>
+      <Layout pageTitle="Roadmap">
         <RoadmapSection/>
       </Layout>
   )

@@ -71,7 +71,7 @@ const Text = styled.p`
 
 const About= () => {
     return (
-        <Layout>
+        <Layout pageTitle="About">
             <Section>
                 <Wrapper>
                     <Title>About</Title>

@@ -1,11 +1,11 @@
 import * as React from 'react'
 import {Helmet} from 'react-helmet'
 
-const Seo = () => {
+const Seo = ({title='Kryptokrona'}) => {
     return (
         <Helmet htmlAttributes>
             <html lang="en"/>
-            <title>Kryptokrona</title>
+            <title>{title}</title>
             <meta name="Kryptokrona" content="Kryptokrona"/>
             <meta name="description" content="Hugin is a messaging service where messages are stored on the kryptokrona blockchain. Your
                         messages are secured with industry leading encryption so that only you and your chat partner have

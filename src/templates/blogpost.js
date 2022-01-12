@@ -38,12 +38,12 @@ export default function Template({
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
     return (
-        <Layout>
+        <Layout pageTitle={frontmatter.title}>
             <Section>
                 <Wrapper>
                     <div className="blog-post-container">
                         <div className="blog-post">
-                            <PageHeader title={frontmatter.title}/>
+                            <PageHeader title={frontmatter.title} text1={frontmatter.date}/>
                             <div
                                 style={{height: '100%'}}
                                 className="blog-post-content"

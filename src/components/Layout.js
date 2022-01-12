@@ -8,7 +8,7 @@ import Seo from "./Seo";
 import Contribute from "./Contribute";
 
 
-const Home = ( { children } ) => {
+const Home = ( { children, pageTitle } ) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
@@ -16,7 +16,7 @@ const Home = ( { children } ) => {
     };
     return (
         <>
-                <Seo/>
+                <Seo title={pageTitle}/>
                 <Sidebar isOpen={isOpen} toggle={toggle} />
                 <Navbar toggle={toggle} />
                 {children}
