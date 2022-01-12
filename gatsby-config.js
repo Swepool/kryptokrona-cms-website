@@ -9,6 +9,12 @@ module.exports = {
         'gatsby-plugin-sitemap',
         'gatsby-plugin-mdx',
         {
+            resolve: "gatsby-plugin-manifest",
+            options: {
+                icon: "src/images/favicon.ico",
+            },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/blog`,
