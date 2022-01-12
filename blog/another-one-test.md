@@ -1,5 +1,5 @@
 ---
-path: /blog/testarr
+path: /testarr
 layout: blog
 title: Another one test
 date: 2022-01-12T21:59:27.488Z
