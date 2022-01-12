@@ -11,7 +11,7 @@ const Card = styled.div`
     transition: 300ms;
     opacity: 60%;
     backdrop-filter: blur(8);
-
+    
   }
 
 
