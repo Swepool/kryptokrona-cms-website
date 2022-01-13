@@ -132,8 +132,8 @@ const Footer = () => {
                             <a href="https://t.me/xkrofficial"><FaTelegram aria-label="Telegram" size="1.5em" color="#FFFFFF87"/></a>
                         </SocialsWrapper>
                     </div>
-                    <img height="20px" src="https://api.netlify.com/api/v1/badges/f7391b45-466e-4665-b428-d96cb549a52a/deploy-status"/>
-                    <a href="https://plausible.io/kryptokrona.org"><img height="20px" src={analytics}/></a>
+                    <img alt="Netlify-status" height="20px" src="https://api.netlify.com/api/v1/badges/f7391b45-466e-4665-b428-d96cb549a52a/deploy-status"/>
+                    <a href="https://plausible.io/kryptokrona.org"><img alt="Plausible-logo" height="20px" src={analytics}/></a>
                 </ContentWrapper>
             </Container>
         </Section>

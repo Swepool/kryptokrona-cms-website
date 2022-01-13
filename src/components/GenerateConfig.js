@@ -34,11 +34,13 @@ const Generator = () => {
 
         const input = document.getElementById('input')
 
+        //Randomises the pool and returns it
         function randomPool(array) {
             const random = Math.floor(Math.random() * array.length)
             return array[random]
         }
 
+        //Generates the config.json and makes it downloadable
         function downloadObjectAsJson(exportObj, exportName) {
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
             const downloadAnchorNode = document.createElement('a');
@@ -48,7 +50,7 @@ const Generator = () => {
             downloadAnchorNode.click();
             downloadAnchorNode.remove();
         }
-
+        //The json file
         function generateFile(pool, user) {
             return JSON.parse(
                 `{
@@ -133,19 +135,22 @@ const Generator = () => {
         }
 
         document.getElementById('generateBtn').addEventListener('click', function () {
-
+            // fetches the array of pools
             fetch("https://raw.githubusercontent.com/Swepool/kryptokrona-pools/main/pools.json")
                 .then(res  => res.json())
                 .then(data => {
+                    //if there's something we generate a file, this could be improved.. for example check the address.
                     if (input.value) {
                         downloadObjectAsJson(generateFile(randomPool(data.pools), input.value), "config")
                     } else {
+                        //if empty send alert
                         alert("Fill in wallet address to generate config.json")
                     }
                 })
         })
     })
 
+    // This is just the field and button, any page can import it.
     return (
                 <InputWrapper>
                     <Address id="input" placeholder="Enter Address"/>

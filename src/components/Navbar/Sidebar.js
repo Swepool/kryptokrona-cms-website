@@ -78,7 +78,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink href="/wallets">Wallet</SidebarLink>
-                    <SidebarLink className="rgbText" href="https://hugin.chat">Hugin</SidebarLink>
+                    <SidebarLink href="https://hugin.chat">Hugin</SidebarLink>
                     <SidebarLink href="/mining">Mining</SidebarLink>
                     <SidebarLink href="https://explorer.kryptokrona.se">Explorer</SidebarLink>
                     <SidebarLink href="blog">Blog</SidebarLink>

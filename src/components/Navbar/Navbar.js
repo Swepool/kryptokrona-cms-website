@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import {HiOutlineMenu} from "react-icons/all";
-import XkrLogo from '../images/Xkrlogo.svg'
+import XkrLogo from '../../images/Xkrlogo.svg'
 
 const Nav = styled.div`
   height: 80px;
@@ -101,7 +101,7 @@ const Navbar = ({ toggle }) => {
                 <Brand href="/"><img style={{height: "1.5rem"}} src={XkrLogo} alt="Kryptokrona logo"/></Brand>
                 <Navigation>
                     <NavButton href="/wallets">Wallet</NavButton>
-                    <NavButton className="rgbText" href="https://hugin.chat">Hugin</NavButton>
+                    <NavButton href="https://hugin.chat">Hugin</NavButton>
                     <NavButton href="/mining">Mining</NavButton>
                     <NavButton href="/blog">Blog</NavButton>
                     <NavButton href="/about">About</NavButton>

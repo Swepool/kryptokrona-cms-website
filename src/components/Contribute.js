@@ -163,6 +163,7 @@ const Contribute =() => {
 
     useEffect((file) => {
 
+        //Fetches the last commit on given url
         fetch("https://api.github.com/repos/kryptokrona/hugin-messenger/commits/master")
             .then((response) => response.json())
             .then((data) => {
@@ -173,6 +174,7 @@ const Contribute =() => {
                 const avatar = data.author.avatar_url
                 const url = data.html_url
 
+                //Adds the returned content to dom
                 document.getElementById('commitTitle').textContent = commitMsg
                 document.getElementById('additions').textContent = additions
                 document.getElementById('deletions').textContent = deletions

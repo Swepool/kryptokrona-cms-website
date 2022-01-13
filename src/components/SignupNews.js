@@ -83,7 +83,7 @@ const Button = styled.button`
     cursor: pointer;
 `
 
-
+//Netlify automatically collects submitted forms, anyone with access to netlify can export as .CSV
 const NewsletterSignup = () => {
     return(
         <Section>

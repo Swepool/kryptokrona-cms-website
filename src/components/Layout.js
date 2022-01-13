@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react';
-import Navbar from "../components/Navbar";
-import Sidebar from "./Sidebar";
+import Navbar from "./Navbar/Navbar";
+import Sidebar from "./Navbar/Sidebar";
 import Footer from './Footer'
 import '../theme/style.css'
 import Seo from "./Seo";
