@@ -25,24 +25,8 @@ const Wrapper = styled.div`
   }
 `
 
-const ButtonWrapper = styled.div`
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  
-  @media screen and (max-width: 1000px) {
-    justify-content: center;
-  }
-`
 
 const Title = styled.h1`
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-weight: 500;
-`
-
-const SubTitle = styled.h2`
   font-family: 'Montserrat', sans-serif;
   color: white;
   font-weight: 500;

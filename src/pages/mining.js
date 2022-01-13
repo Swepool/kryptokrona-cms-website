@@ -1,18 +1,16 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import ArtImg from '../images/mining.png';
-import Fillbutton from "../components/buttons/Button";
-import Borderbutton from "../components/buttons/Borderbutton";
 import Layout from "../components/Layout";
 import {FaApple, FaLinux, FaWindows} from "react-icons/all";
 import GenerateConfig from "../components/GenerateConfig";
 
-
 const Section = styled.div`
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   width: 100%;
   background-color: #1d1d1d;
   padding-top: 15em;
@@ -42,7 +40,7 @@ const Container = styled.div`
 `
 
 const ContentWrapper= styled.div`
-    max-width: 40%;
+  max-width: 40%;
   display: flex;
   flex-direction: column;
   gap: 20px;

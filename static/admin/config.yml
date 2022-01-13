@@ -2,8 +2,8 @@ backend:
   name: github
   repo: swepool/kryptokrona-cms-website
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/content
+public_folder: /content
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -20,3 +20,12 @@ collections:
       - {label: "Summary", name: "summary", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: Tags, name: tags, widget: list, default: ['Blog', 'News']}
+  - name: 'files'
+    label: 'Files'
+    folder: 'files'
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - {label: Path, name: "path"}
+      - {label: "File", name: "file", widget: "file"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}

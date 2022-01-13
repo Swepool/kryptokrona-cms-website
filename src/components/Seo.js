@@ -14,6 +14,7 @@ const Seo = ({title='Kryptokrona'}) => {
             <meta name="robots" content="index, follow"/>
             <link rel="canonical" href="http://Kryptokrona.org/" />
             <link rel="icon" src="../images/favicon.ico" type="image/x-icon"/>
+            <script defer data-domain="kryptokrona.org" src="https://plausible.io/js/plausible.js"/>
             <meta property="og:image" content="https://user-images.githubusercontent.com/36674091/148423512-2c019bd6-6b32-45ce-b380-100632b00f0f.png" />
         </Helmet>
     )

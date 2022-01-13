@@ -43,7 +43,7 @@ export default function Template({
                 <Wrapper>
                     <div className="blog-post-container">
                         <div className="blog-post">
-                            <PageHeader title={frontmatter.title} text1={frontmatter.date}/>
+                            <PageHeader title={frontmatter.title} text1={frontmatter.date} text2={frontmatter.tags}/>
                             <div
                                 style={{height: '100%'}}
                                 className="blog-post-content"
@@ -65,6 +65,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+          tags
       }
     }
   }

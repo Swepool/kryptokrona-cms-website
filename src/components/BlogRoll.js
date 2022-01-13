@@ -5,16 +5,15 @@ import styled from "@emotion/styled";
 
 const Card = styled.div`
   flex: 1 0 28%;
+  padding: 20px 0;
   border-bottom: 1px solid #2a2a2a;
 
   &:hover {
     transition: 300ms;
     opacity: 60%;
     backdrop-filter: blur(8);
-    
   }
-
-
+  
   @media screen and (max-width: 1440px) {
     flex: 1 0 40%;
   }
@@ -26,12 +25,15 @@ const Card = styled.div`
 
 const BlogImage = styled.img`
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 `
 
 const Title = styled.h2`
+  font-weight: 400;
   font-size: 30px;
   color: #ffffff;
   margin-top: 0;
@@ -39,7 +41,7 @@ const Title = styled.h2`
 
 const Text = styled.p`
   text-align: justify;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
 
 `;
 const Tags = styled.p`
@@ -96,7 +98,10 @@ const query = () => (
     <StaticQuery
         query={graphql`
 query BlogRollQuery {
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+  allMarkdownRemark(
+    sort: {order: DESC, fields: [frontmatter___date]}
+    filter: {frontmatter: {title: {ne: ""}, summary: {ne: ""}}}
+  ) {
     edges {
       node {
         excerpt(pruneLength: 400)

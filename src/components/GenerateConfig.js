@@ -3,45 +3,11 @@ import styled from "@emotion/styled";
 import {useEffect} from "react";
 import Fillbutton from "./buttons/Button";
 
-const Section = styled.div`
-  background-color: #1d1d1d;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-`
-
-const Wrapper = styled.div`
-  max-width: 1400px;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 40px 40px;
-  gap: 40px;
-
-  @media screen and (max-width: 700px) {
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-  }
-
-`
-
 const InputWrapper = styled.div`
   display: flex;
   gap: 20px;
 `
 
-const Text = styled.h3`
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 200;
-  margin: 0;
-`
 
 const Address = styled.input`
   background-color: #1d1d1d;

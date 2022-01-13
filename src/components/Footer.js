@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import {FaDiscord, FaTelegram, FaTwitter} from 'react-icons/fa'
+import analytics from '../images/Analytics.png'
 
 const Section = styled.footer`
   border-top: 1px solid rgba(255, 255, 255, 0.13);
@@ -42,9 +43,13 @@ const ListWrapper = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
 
   @media screen and (max-width: 580px) {
+    gap: 15px;
     justify-content: center;
+    align-items: center;
     margin-top: 50px;
   }
 `
@@ -54,7 +59,7 @@ const SocialsWrapper = styled.div`
   flex-direction: row;
   gap: 20px;
   justify-content: end;
-  margin-top: 20px;
+  margin: 20px 0;
 
   @media screen and (max-width: 580px) {
     justify-content: center;
@@ -119,12 +124,16 @@ const Footer = () => {
                     </NavList>
                 </ListWrapper>
                 <ContentWrapper>
-                    <SubTitle>Developed by Kryptokrona</SubTitle>
-                    <SocialsWrapper>
-                        <a href="https://twitter.com/kryptokrona"><FaTwitter aria-label="Twitter" size="1.5em" color="#FFFFFF87"/></a>
-                        <a href="https://chat.kryptokrona.se"><FaDiscord aria-label="Discord" size="1.5em" color="#FFFFFF87"/></a>
-                        <a href="https://t.me/xkrofficial"><FaTelegram aria-label="Telegram" size="1.5em" color="#FFFFFF87"/></a>
-                    </SocialsWrapper>
+                    <div>
+                        <SubTitle>Developed by Kryptokrona</SubTitle>
+                        <SocialsWrapper>
+                            <a href="https://twitter.com/kryptokrona"><FaTwitter aria-label="Twitter" size="1.5em" color="#FFFFFF87"/></a>
+                            <a href="https://chat.kryptokrona.se"><FaDiscord aria-label="Discord" size="1.5em" color="#FFFFFF87"/></a>
+                            <a href="https://t.me/xkrofficial"><FaTelegram aria-label="Telegram" size="1.5em" color="#FFFFFF87"/></a>
+                        </SocialsWrapper>
+                    </div>
+                    <img height="20px" src="https://api.netlify.com/api/v1/badges/f7391b45-466e-4665-b428-d96cb549a52a/deploy-status"/>
+                    <a href="https://plausible.io/kryptokrona.org"><img height="20px" src={analytics}/></a>
                 </ContentWrapper>
             </Container>
         </Section>

@@ -101,7 +101,7 @@ const Navbar = ({ toggle }) => {
                 <Brand href="/"><img style={{height: "1.5rem"}} src={XkrLogo} alt="Kryptokrona logo"/></Brand>
                 <Navigation>
                     <NavButton href="/wallets">Wallet</NavButton>
-                    <NavButton className="rgbText" href="/hugin">Hugin</NavButton>
+                    <NavButton className="rgbText" href="https://hugin.chat">Hugin</NavButton>
                     <NavButton href="/mining">Mining</NavButton>
                     <NavButton href="/blog">Blog</NavButton>
                     <NavButton href="/about">About</NavButton>

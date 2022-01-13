@@ -2,8 +2,8 @@ import * as React from 'react'
 import styled from "@emotion/styled";
 
 const Card = styled.div`
-  border-radius: 16px;
-  border: 2px solid #33333A;
+  border-radius: 8px;
+  border: 2px solid #979797;
   padding: 35px;
   width: 320px;
   height: 240px;
