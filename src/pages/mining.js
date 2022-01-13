@@ -96,9 +96,8 @@ const Hero = () => {
                         <Title>Choose your OS</Title>
                         <Text>You need to replace the Config.json file after you’ve downloaded the mining software for your OS. You can generate one below.</Text>
                         <ButtonWrapper>
-                            <a id='latest_win' href='/#'><FaWindows aria-label="Download Windows" size="3em" color="#979797"/></a>
-                            <a id='latest_mac' href='/#'><FaApple  aria-label="Download MacOS" size="3em" color="#979797"/></a>
-                            <a id='latest_lin' href='/#'><FaLinux aria-label="Download Linux" size="3em" color="#979797"/></a>
+                            <a id='latest_win' href='https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-msvc-cuda10_1-win64.zip'><FaWindows aria-label="Download Windows" size="3em" color="#979797"/></a>
+                            <a id='latest_lin' href='https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-xenial-x64.tar.gz'><FaLinux aria-label="Download Linux" size="3em" color="#979797"/></a>
                         </ButtonWrapper>
                         <GenerateConfig/>
                     </ContentWrapper>

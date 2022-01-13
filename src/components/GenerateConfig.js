@@ -29,36 +29,29 @@ const Address = styled.input`
 
 const Generator = () => {
 
+    // Generate config.json
     useEffect(() => {
+
         const input = document.getElementById('input')
-        const poolList = ["pool.kryptokrona.se:3333", "swepool.org:3333", "norpool.org:3333"]
 
-        document.getElementById('generateBtn').addEventListener('click', function () {
+        function randomPool(array) {
+            const random = Math.floor(Math.random() * array.length)
+            return array[random]
+        }
 
-            if (input.value) {
-                downloadObjectAsJson(generateFile(randomPool(poolList), input.value), "config")
-            } else {
-                alert("Fill in wallet address to generate config.json")
-            }
+        function downloadObjectAsJson(exportObj, exportName) {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", exportName + ".json");
+            document.body.appendChild(downloadAnchorNode); // required for firefox
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
 
-            function randomPool(array) {
-                const random = Math.floor(Math.random() * array.length)
-                return array[random]
-            }
-
-            function downloadObjectAsJson(exportObj, exportName) {
-                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
-                const downloadAnchorNode = document.createElement('a');
-                downloadAnchorNode.setAttribute("href", dataStr);
-                downloadAnchorNode.setAttribute("download", exportName + ".json");
-                document.body.appendChild(downloadAnchorNode); // required for firefox
-                downloadAnchorNode.click();
-                downloadAnchorNode.remove();
-            }
-
-            function generateFile(pool, user) {
-                return JSON.parse(
-                    `{
+        function generateFile(pool, user) {
+            return JSON.parse(
+                `{
     "api": {"id": null, "worker-id": null},
     "http": {"enabled": false, "host": "127.0.0.1", "port": 0, "access-token": null, "restricted": true},
     "autosave": true,
@@ -136,9 +129,20 @@ const Generator = () => {
     "verbose": 0,
     "watch": true
 }`
-                )
-            }
+            )
+        }
 
+        document.getElementById('generateBtn').addEventListener('click', function () {
+
+            fetch("https://raw.githubusercontent.com/Swepool/kryptokrona-pools/main/pools.json")
+                .then(res  => res.json())
+                .then(data => {
+                    if (input.value) {
+                        downloadObjectAsJson(generateFile(randomPool(data.pools), input.value), "config")
+                    } else {
+                        alert("Fill in wallet address to generate config.json")
+                    }
+                })
         })
     })
 

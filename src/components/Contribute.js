@@ -166,7 +166,6 @@ const Contribute =() => {
         fetch("https://api.github.com/repos/kryptokrona/hugin-messenger/commits/master")
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 const username = data.author.login
                 const commitMsg = data.commit.message
                 const additions = data.stats.additions
