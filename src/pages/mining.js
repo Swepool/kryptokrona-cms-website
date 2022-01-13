@@ -16,8 +16,9 @@ const Section = styled.div`
   padding-top: 15em;
   padding-bottom: 10em;
 
-  @media screen and (max-width: 579px) {
+  @media screen and (max-width: 1000px) {
     padding-top: 8em;
+    padding-bottom: 6em;
   }
 `
 
