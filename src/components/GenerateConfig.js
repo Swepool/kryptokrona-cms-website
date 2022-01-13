@@ -8,7 +8,6 @@ const InputWrapper = styled.div`
   gap: 20px;
 `
 
-
 const Address = styled.input`
   background-color: #1d1d1d;
   border: 1px solid #979797;
@@ -39,7 +38,7 @@ const Generator = () => {
             if (input.value) {
                 downloadObjectAsJson(generateFile(randomPool(poolList), input.value), "config")
             } else {
-                console.log('No value')
+                alert("Fill in wallet address to generate config.json")
             }
 
             function randomPool(array) {

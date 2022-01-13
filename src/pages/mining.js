@@ -78,10 +78,12 @@ const ButtonWrapper = styled.div`
   }
 `
 
-const Art = styled.img`
+const ImageWrapper = styled.div`
   max-width: 500px;
-  width: 100%;
-  margin-bottom: 2rem;
+  max-height: 500px;
+`
+
+const Art = styled.img`
 `
 
 const Hero = () => {
@@ -99,7 +101,9 @@ const Hero = () => {
                         </ButtonWrapper>
                         <GenerateConfig/>
                     </ContentWrapper>
-                    <Art src={ArtImg}/>
+                    <ImageWrapper className="rgb">
+                        <Art src={ArtImg}/>
+                    </ImageWrapper>
                 </Container>
             </Section>
         </Layout>
