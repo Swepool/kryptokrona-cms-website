@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from "../page-components/components/Layout";
+import Layout from "../components/Layout";
 import BlogRoll from "../page-components/blog/BlogRoll";
 import styled from "@emotion/styled";
 

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Navbar from "./navbar/Navbar";
 import Sidebar from "./navbar/Sidebar";
 import Footer from './footer/Footer'
-import '../../theme/style.css'
+import '../theme/style.css'
 import Seo from "./Seo";
 import Contribute from "./footer/Contribute";
 

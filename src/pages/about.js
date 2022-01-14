@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import Layout from "../page-components/components/Layout";
+import Layout from "../components/Layout";
 import AboutCards from "../page-components/AboutCards";
 
 

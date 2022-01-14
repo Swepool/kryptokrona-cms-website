@@ -1,6 +1,7 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://kryptokrona.org`,
+        title: "Kryptokrona",
     },
     plugins: [
         'gatsby-plugin-emotion',

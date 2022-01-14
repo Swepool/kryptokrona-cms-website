@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import BlogHeader from "../page-components/blog/BlogHeader";
-import Layout from "../page-components/components/Layout";
+import Layout from "../components/Layout";
 import styled from "@emotion/styled";
 
 import '../theme/blogpost.css'

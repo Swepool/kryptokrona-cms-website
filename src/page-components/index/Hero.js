@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import ArtImg from '../../images/Kryptokrona.svg';
-import Fillbutton from "../components/buttons/Button";
-import Borderbutton from "../components/buttons/Borderbutton";
+import ArtImg from '../../images/art.png';
+import Fillbutton from "../../components/buttons/Button";
+import Borderbutton from "../../components/buttons/Borderbutton";
 
 
 const Section = styled.div`
@@ -67,6 +67,7 @@ const Art = styled.img`
   max-width: 1360px;
   width: 100%;
   margin-bottom: 2rem;
+  filter: brightness(1.3);
 `
 
 const Hero = () => {
@@ -78,7 +79,7 @@ const Hero = () => {
                     <Text>Kryptokrona exists to secure and simplify our future economic system. Sending and receiving money should not be expensive or slow.
                         We work with open source code that allows you to be involved and improve the money of the future.</Text>
                     <ButtonWrapper>
-                        <Fillbutton addClass="rgb" text="Hugin"/>
+                        <Fillbutton addClass="rgb" text="Hugin" url="https://hugin.chat"/>
                         <Borderbutton text="Roadmap" url="/roadmap"/>
                     </ButtonWrapper>
                 </TextContent>

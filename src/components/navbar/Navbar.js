@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import {HiOutlineMenu} from "react-icons/all";
-import XkrLogo from '../../../images/Xkrlogo.svg'
+import XkrLogo from '../../images/Xkrlogo.svg'
 
 const Nav = styled.div`
   height: 80px;
