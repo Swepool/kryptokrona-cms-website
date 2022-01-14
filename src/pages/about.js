@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import Layout from "../components/Layout";
-import AboutCards from "../components/AboutCards";
+import Layout from "../page-components/components/Layout";
+import AboutCards from "../page-components/AboutCards";
 
 
 const Section = styled.div`

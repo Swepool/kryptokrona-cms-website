@@ -17,9 +17,9 @@ const Button = styled.a`
     cursor: pointer;
 `
 
-const Fillbutton = ({text, url, id}) => {
+const Fillbutton = ({text, url, id, addClass}) => {
     return(
-        <Button id={id} href={url}>{text}</Button>
+        <Button className={addClass} id={id} href={url}>{text}</Button>
     )
 }
 

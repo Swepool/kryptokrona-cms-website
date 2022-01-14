@@ -27,7 +27,7 @@ const Text = styled.p`
   margin: 5px 0;
 `;
 
-const PageHeader = ({title, text1, text2,}) => {
+const BlogHeader = ({title, text1, text2,}) => {
     return (
         <Header>
             <Text>Category: {text2}</Text>
@@ -37,4 +37,4 @@ const PageHeader = ({title, text1, text2,}) => {
     )
 }
 
-export default PageHeader
+export default BlogHeader

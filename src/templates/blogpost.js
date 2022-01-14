@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import PageHeader from "../components/PageHeader";
-import Layout from "../components/Layout";
+import BlogHeader from "../page-components/blog/BlogHeader";
+import Layout from "../page-components/components/Layout";
 import styled from "@emotion/styled";
 
 import '../theme/blogpost.css'
@@ -43,7 +43,7 @@ export default function Template({
                 <Wrapper>
                     <div className="blog-post-container">
                         <div className="blog-post">
-                            <PageHeader title={frontmatter.title} text1={frontmatter.date} text2={frontmatter.tags}/>
+                            <BlogHeader title={frontmatter.title} text1={frontmatter.date} text2={frontmatter.tags}/>
                             <div
                                 style={{height: '100%'}}
                                 className="blog-post-content"

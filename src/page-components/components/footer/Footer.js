@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import {FaDiscord, FaTelegram, FaTwitter} from 'react-icons/fa'
-import analytics from '../images/Analytics.png'
+import analytics from '../../../images/Analytics.png'
 
 const Section = styled.footer`
   border-top: 1px solid rgba(255, 255, 255, 0.13);

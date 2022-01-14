@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { useState } from 'react';
-import Navbar from "./Navbar/Navbar";
-import Sidebar from "./Navbar/Sidebar";
-import Footer from './Footer'
-import '../theme/style.css'
+import Navbar from "./navbar/Navbar";
+import Sidebar from "./navbar/Sidebar";
+import Footer from './footer/Footer'
+import '../../theme/style.css'
 import Seo from "./Seo";
-import Contribute from "./Contribute";
+import Contribute from "./footer/Contribute";
 
 
 const Home = ( { children, pageTitle } ) => {

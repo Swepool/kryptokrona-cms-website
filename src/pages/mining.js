@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import ArtImg from '../images/mining.png';
-import Layout from "../components/Layout";
+import Layout from "../page-components/components/Layout";
 import {FaLinux, FaWindows} from "react-icons/all";
-import GenerateConfig from "../components/GenerateConfig";
+import GenerateConfig from "../page-components/mining/GenerateConfig";
 
 const Section = styled.div`
   overflow: hidden;

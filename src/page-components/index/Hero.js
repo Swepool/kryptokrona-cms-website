@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import ArtImg from '../images/Kryptokrona.svg';
-import Fillbutton from "./buttons/Button";
-import Borderbutton from "./buttons/Borderbutton";
+import ArtImg from '../../images/Kryptokrona.svg';
+import Fillbutton from "../components/buttons/Button";
+import Borderbutton from "../components/buttons/Borderbutton";
 
 
 const Section = styled.div`
@@ -78,7 +78,7 @@ const Hero = () => {
                     <Text>Kryptokrona exists to secure and simplify our future economic system. Sending and receiving money should not be expensive or slow.
                         We work with open source code that allows you to be involved and improve the money of the future.</Text>
                     <ButtonWrapper>
-                        <Fillbutton text="Download"/>
+                        <Fillbutton addClass="rgb" text="Hugin"/>
                         <Borderbutton text="Roadmap" url="/roadmap"/>
                     </ButtonWrapper>
                 </TextContent>

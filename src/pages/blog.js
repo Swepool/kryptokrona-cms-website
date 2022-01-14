@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Layout from "../components/Layout";
-import BlogRoll from "../components/BlogRoll";
+import Layout from "../page-components/components/Layout";
+import BlogRoll from "../page-components/blog/BlogRoll";
 import styled from "@emotion/styled";
 
 const Section = styled.div`

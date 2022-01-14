@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import {useEffect} from "react";
-import Fillbutton from "./buttons/Button";
+import Fillbutton from "../components/buttons/Button";
 
 const InputWrapper = styled.div`
   display: flex;
