@@ -64,7 +64,7 @@ const BlogWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-class BlogRoll extends React.Component {
+class GuidesRoll extends React.Component {
     render() {
         const { data } = this.props;
         const { edges: posts } = data.allMarkdownRemark;
@@ -75,10 +75,8 @@ class BlogRoll extends React.Component {
                     posts.map(({ node: post }) => (
                         <Card key={post.id}>
                             <Link to={post.frontmatter.path}>
-                                <BlogImage src={post.frontmatter.thumbnail}/>
                                 <Tags>{post.frontmatter.tags}</Tags>
                                 <Title>{post.frontmatter.title}</Title>
-                                <Text>{post.frontmatter.summary}</Text>
                                 <Date>{post.frontmatter.date}</Date>
                             </Link>
                         </Card>
@@ -88,7 +86,7 @@ class BlogRoll extends React.Component {
     }
 }
 
-BlogRoll.propTypes = {
+GuidesRoll.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,
@@ -99,22 +97,18 @@ BlogRoll.propTypes = {
 const query = () => (
     <StaticQuery
         query={graphql`
-query BlogRollQuery {
+query GuidesRollQuery {
   allMarkdownRemark(
     sort: {order: DESC, fields: [frontmatter___date]}
-    filter: {frontmatter: {title: {ne: ""}, summary: {ne: ""}}, fileAbsolutePath: {glob: "**/blog/*.md"}}
+    filter: {frontmatter: {title: {ne: ""}, summary: {ne: ""}}, fileAbsolutePath: {glob: "**/guides/*.md"}}
   ) {
     edges {
       node {
-        excerpt(pruneLength: 400)
         id
         frontmatter {
           path
           title
           date(formatString: "MMMM DD, YYYY")
-          thumbnail
-          tags
-          summary
         }
       }
     }
@@ -122,7 +116,7 @@ query BlogRollQuery {
 }
 
     `}
-        render={(data, count) => <BlogRoll data={data} count={count} />}
+        render={(data, count) => <GuidesRoll data={data} count={count} />}
     />
 )
 
