@@ -28,13 +28,18 @@ Install a handy tool called screen which will allow you to navigate between term
 Then install a handy tool for unzipping folders by typing sudo apt install unzip and hitting enter
 now copy and paste:
  
+``screen``
 
-screen
-wget https://kryptokrona.se/Kryptokrona-linux.zip
-unzip Kryptokrona-linux.zip
-rm -rf Kryptokrona-linux.zip
-cd Kryptokrona
-./kryptokrona --add-exclusive-node 68.183.214.93:11897
+`wget https://kryptokrona.se/Kryptokrona-linux.zip`
+
+`unzip Kryptokrona-linux.zip`
+
+`rm -rf Kryptokrona-linux.zip`
+
+``cd Kryptokrona``
+
+`./kryptokrona --add-exclusive-node 68.183.214.93:11897`
+
 Once fully synced open you can go ahead and close your node by hitting ctrl + c, now it is time to open port 11898.
 Head on over to your AWS management console and click on security groups under network & security.
 Mark the first one of the security groups, click actions and then edit inbound rules.
@@ -43,20 +48,25 @@ Repeat the process for outbound rules by clicking actions and edit outbound rule
 Now unmark the first security group and mark the second one and repeat the same process as above.
 Then head back to your ssh terminal typ screen and hit enter and then start your node with:
 
-./kryptokrona --enable-cors=* --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
+``./kryptokrona --enable-cors=* --enable-blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898``
+
 Let your node sync.. then press ctrl + a and ctrl + d in rapid succession to mimise the node terminal window.
 
 Open a terminal on your local machine and check if your node is responding (replace 0.0.0.0 with your instance ip)
 
-curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://0.0.0.0:11898/json_rpc
+``curl -d '{"jsonrpc":"2.0", "method":"getblockcount", "params":{}}' http://0.0.0.0:11898/json_rpc``
+
 If it answers with the current block count then your all good to start mining!
 Head on back to the SSH terminal window and copy and paste these commands:
 
-screen
-./miner
+`screen`
+
+`./miner`
+
 Copy and paste your XKR adress into the terminal and hit enter.
-you are now mining on your cloud server, hit ctrl + a and ctrl + d again to minimise the mining terminal window and type clear and hit enter after that.
-Then verify your running processes by typing ps -a and hit enter, you should then be seeing kryptokrona and miner running as separate processes.
+you are now mining on your cloud server, hit ```ctrl + a``` and ```ctrl + d``` again to minimise the mining terminal window and type clear and hit enter after that.
+
+Then verify your running processes by typing ps ``-a`` and hit enter, you should then be seeing kryptokrona and miner running as separate processes.
 You can now go ahead and close the ssh terminal window.
 
 Thats it, you are now running a public node within the XKR network and also chugging some hashes at about 100-700 h/s.
