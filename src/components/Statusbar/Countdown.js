@@ -20,7 +20,7 @@ const Title = styled.h3`
 `
 const Percentage = styled.h3`
   font-family: 'Roboto Mono', monospace;
-  color: #979797;
+  color: #5ff281;
   font-weight: 200;
 `
 const Time = styled.h3`
@@ -28,7 +28,7 @@ const Time = styled.h3`
   color: #979797;
   font-weight: 200;
 `
-const Goal = styled.h3`
+const Goal = styled.div`
     display: flex;
     align-items: center;
     height: 10px;
@@ -37,7 +37,7 @@ const Goal = styled.h3`
     width: 100%;
     padding: 2px;
 `
-const Progress = styled.h3`
+const Progress = styled.div`
   animation: load 3s normal forwards;
   box-shadow: 0 10px 40px -10px #fff;
   background-color: rgba(255, 255, 255, 0.795);
@@ -55,12 +55,12 @@ const Countdown = () => {
         const url = 'https://swenode.org/api/getinfo'
 
         // Set goal to reach
-        const goal = 1000000
+        let goal = 1000000
 
-        //HTML Elements
-        const percentage = document.getElementById('percentage')
-        const progressBar = document.getElementById('progress')
-        const timeText = document.getElementById('time')
+        //Add commas to goal before render
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
 
         //***Start***
 //Get height from node
@@ -68,7 +68,12 @@ const Countdown = () => {
             fetch(url)
                 .then(res => res.json())
                 .then(data => {
+                    if(data.height > goal) {
+                        goal += 100000
+                    }
                     render(data.height, goal)
+                    document.getElementById('blocks').textContent = numberWithCommas(goal) + " Blocks"
+                    console.log(goal)
                 })
         }
 
@@ -83,14 +88,10 @@ const Countdown = () => {
             const timeleft = blocksLeft * 90
             const daysLeft = "est." + " " + (((timeleft / 60) / 60) / 24).toFixed(0) + " Days"
 
-
             //Render
-            percentage.textContent = percentageToGoal
-            progressBar.style.width = percentageToGoal
+            document.getElementById('percentage').textContent = percentageToGoal
+            document.getElementById('progress').style.width = percentageToGoal
             //timeText.textContent = daysLeft
-
-            //Just to check
-            console.log('Success')
         }
 
 //Start
@@ -101,7 +102,7 @@ const Countdown = () => {
     return(
         <Wrapper>
             <TextWrapper>
-                <Title>1,000,000 Blocks</Title>
+                <Title id="blocks"/>
                 <Percentage id="percentage"/>
             </TextWrapper>
 

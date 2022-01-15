@@ -4,6 +4,8 @@ import ArtImg from '../images/mining.png';
 import Layout from "../components/Layout";
 import {FaLinux, FaWindows} from "react-icons/all";
 import GenerateConfig from "../page-components/mining/GenerateConfig";
+import Calculator from "../page-components/mining/Calculator";
+import Nodestats from "../components/Statusbar/Nodestats";
 
 const Section = styled.div`
   overflow: hidden;
@@ -22,7 +24,7 @@ const Section = styled.div`
   }
 `
 
-const Container = styled.div`
+const Wrapper = styled.div`
   max-width: 1400px;
   padding: 0 40px;
   width: 100%;
@@ -91,7 +93,7 @@ const Hero = () => {
     return (
         <Layout pageTitle="Mining">
             <Section>
-                <Container>
+                <Wrapper>
                     <ContentWrapper>
                         <Title>Choose your OS</Title>
                         <Text>You need to replace the Config.json file after you’ve downloaded the mining software for your OS. You can generate one below.</Text>
@@ -104,7 +106,7 @@ const Hero = () => {
                     <ImageWrapper className="rgb">
                         <Art src={ArtImg}/>
                     </ImageWrapper>
-                </Container>
+                </Wrapper>
             </Section>
         </Layout>
     )

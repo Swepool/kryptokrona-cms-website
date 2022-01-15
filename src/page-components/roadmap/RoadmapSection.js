@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   max-width: 1400px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 40px;
   transition: all 250ms;
 

@@ -104,7 +104,11 @@ const Card = styled.div`
   padding: 20px;
 
   @media screen and (max-width: 1029px) {
-    width: 90%;
+    width: 80%;
+  }
+
+  @media screen and (max-width: 579px) {
+    width: 100%;
   }
 `
 const CardTextWrapper = styled.div`

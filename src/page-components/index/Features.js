@@ -7,6 +7,7 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 `
 
 const Wrapper = styled.div`
@@ -59,7 +60,7 @@ const CardContent = styled.div`
 const CardTitle = styled.h3`
   margin: 0;
   font-weight: 200;
-  color: rgb(151, 151, 151);
+  color: rgb(255, 255, 255);
 `
 const Text = styled.p`
   font-family: 'Roboto Mono', monospace;
