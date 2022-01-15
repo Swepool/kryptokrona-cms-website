@@ -4,8 +4,6 @@ import ArtImg from '../images/mining.png';
 import Layout from "../components/Layout";
 import {FaLinux, FaWindows} from "react-icons/all";
 import GenerateConfig from "../page-components/mining/GenerateConfig";
-import Calculator from "../page-components/mining/Calculator";
-import Nodestats from "../components/Statusbar/Nodestats";
 
 const Section = styled.div`
   overflow: hidden;
