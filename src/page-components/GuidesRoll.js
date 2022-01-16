@@ -3,65 +3,36 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import styled from "@emotion/styled";
 
-const Card = styled.div`
-  flex: 1 0 28%;
-  padding: 20px 0;
-  border-bottom: 1px solid #2a2a2a;
-  filter: saturate(0%);
-  -webkit-filter: saturate(0%);
-  transition: 250ms;
-  
-  &:hover {
-  filter: saturate(100%);
-  -webkit-filter: saturate(100%);
-}
-  
-  @media screen and (max-width: 1440px) {
-    flex: 1 0 40%;
-  }
-
-  @media screen and (max-width: 768px) {
-    flex: 1 0 100%;
-  }
+const BlogWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 `;
 
-const BlogImage = styled.img`
+const Card = styled.div`
   width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 5px;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom: 1px solid #2a2a2a;
   transition: 250ms;
-`
+  align-items: center;
+  
+  &:hover {
+    opacity: 60%;
+  }
+`;
 
 const Title = styled.h2`
   font-weight: 400;
   font-size: 30px;
   color: #ffffff;
-  margin-top: 0;
-`;
-
-const Text = styled.p`
-  text-align: justify;
-  color: rgba(255, 255, 255, 0.6);
-
-`;
-const Tags = styled.p`
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.6);
 `;
 
 const Date = styled.p`
+  margin: 0;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-`;
-
-const BlogWrapper = styled.div`
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  flex-wrap: wrap;
 `;
 
 class GuidesRoll extends React.Component {
@@ -73,13 +44,14 @@ class GuidesRoll extends React.Component {
             <BlogWrapper>
                 {posts &&
                     posts.map(({ node: post }) => (
+                        <Link style={{width: "100%"}} to={post.frontmatter.path}>
                         <Card key={post.id}>
-                            <Link to={post.frontmatter.path}>
-                                <Tags>{post.frontmatter.tags}</Tags>
+
                                 <Title>{post.frontmatter.title}</Title>
                                 <Date>{post.frontmatter.date}</Date>
-                            </Link>
+
                         </Card>
+                    </Link>
                     ))}
             </BlogWrapper>
         )
