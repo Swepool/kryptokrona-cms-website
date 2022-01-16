@@ -4,7 +4,7 @@ import BlogHeader from "../page-components/blog/BlogHeader";
 import Layout from "../components/Layout";
 import styled from "@emotion/styled";
 
-import '../theme/blogpost.css'
+import '../theme/post-theme.css'
 
 const Section = styled.div`
   background-color: #1d1d1d;
