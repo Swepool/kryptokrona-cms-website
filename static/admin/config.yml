@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: swepool/kryptokrona-cms-website
+  name: git-gateway
 
 media_folder: static/content
 public_folder: /content
