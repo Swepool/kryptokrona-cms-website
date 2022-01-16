@@ -3,6 +3,8 @@ path: /run-a-node
 layout: blog
 title: Run a public node
 date: 2022-01-15T23:04:47.018Z
+tags:
+  - Guide
 ---
 Have you ever considered what you can do for Kryptokronan?
 Well, as you may know public nodes are vital to the network as they allow for people to sync their wallets and new nodes to sync the blockchain.
