@@ -1,5 +1,9 @@
 ---
+path: /mining-intro
 title: Mining Intro
+date: 2022-01-16T11:24:58.471Z
+tags:
+  - Guide
 ---
 
 Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the Kryptokrona network. By doing this, you will be rewarded with some Kryptokrona.
