@@ -76,7 +76,7 @@ const Features = () => {
 
                 <Card>
                     <CardContent>
-                        <CardTitle> 🔒 Private money</CardTitle>
+                        <CardTitle>Private money</CardTitle>
                         <Text>All transactions are private. Users can share view keys to give trusted parties access to to share account information.</Text>
                     </CardContent>
 
@@ -84,35 +84,35 @@ const Features = () => {
 
                 <Card>
                     <CardContent>
-                        <CardTitle> 🤙 Quick & efficient</CardTitle>
+                        <CardTitle>Quick & efficient</CardTitle>
                         <Text>Our network processes new transactions every 90 seconds, in comparison to Bitcoins 10 minute delay.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle> 🗂 The peoples currency</CardTitle>
+                        <CardTitle>The peoples currency</CardTitle>
                         <Text>You can assist Kryptokrona. Through mining you can create Kryptokrona and store them wherever you want to.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>🐥 Peer to peer</CardTitle>
+                        <CardTitle>Peer to peer</CardTitle>
                         <Text>The Kryptokrona isn’t dependent on central banks or servers, thus less fragile than todays systems.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>😎 Transparency</CardTitle>
+                        <CardTitle>Transparency</CardTitle>
                         <Text>Our source code is open for everyone to view and our community is open for anyone interested.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>😎 Technical support</CardTitle>
+                        <CardTitle>Technical support</CardTitle>
                         <Text>You can get assistance with Kryptokrona, around the clock, every day of the week in our Discord server. Welcome for discussions.</Text>
                     </CardContent>
                 </Card>
