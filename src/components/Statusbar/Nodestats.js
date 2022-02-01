@@ -71,12 +71,22 @@ const Nodestats = () => {
                 document.getElementById("height").innerHTML = Height;
                 document.getElementById("nodes").innerHTML = Nodes;
             });
-        fetch("https://api.coingecko.com/api/v3/coins/kryptokrona")
-            .then((response) => response.json())
-            .then((data) => {
-                const Price = data.market_data.current_price.btc;
-                document.getElementById("price").innerHTML = Price * 100000000 + " Sats";
-            });
+        async function calcPrice() {
+            let xkrPrice
+            let satPrice
+            await fetch("https://www.exbitron.com/api/v2/peatio/coinmarketcap/trades/XKR_USDT")
+                .then(res =>res.json())
+                .then(data => {
+                    xkrPrice = data[0].price
+                })
+            await fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
+                .then(res => res.json())
+                .then(data => {
+                    satPrice = data.market_data.current_price.usd / 100000000
+                })
+            document.getElementById("price").innerHTML = (xkrPrice / satPrice).toFixed(2) + " Sats"
+        }
+        calcPrice()
     });
 
     return(
@@ -97,7 +107,7 @@ const Nodestats = () => {
                         <Text id="nodes"></Text>
                     </Item>
                     <Item>
-                        <Title>Price</Title>
+                        <Title>Lowest Price</Title>
                         <Text id="price"></Text>
                     </Item>
                 </ItemWrapper>
