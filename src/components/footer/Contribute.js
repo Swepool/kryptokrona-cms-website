@@ -113,7 +113,9 @@ const Card = styled.div`
   }
 `
 const CardTextWrapper = styled.div`
-
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `
 const UserWrapper= styled.div`
   display: flex;
