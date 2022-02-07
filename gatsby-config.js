@@ -10,6 +10,12 @@ module.exports = {
         'gatsby-plugin-sitemap',
         'gatsby-plugin-mdx',
         {
+            resolve: `gatsby-plugin-canonical-urls`,
+            options: {
+                siteUrl: `https://www.kryptokrona.org`,
+            },
+        },
+        {
             resolve: "gatsby-plugin-manifest",
             options: {
                 icon: "src/images/favicon.ico",
