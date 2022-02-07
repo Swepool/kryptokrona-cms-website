@@ -6,7 +6,6 @@ import CTAdesktop from "../page-components/wallet/CTAdesktop";
 const Wallet = () => {
     return(
         <Layout>
-            <CTAdesktop/>
         </Layout>
     )
 
