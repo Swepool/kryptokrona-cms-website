@@ -2,8 +2,10 @@ import * as React from 'react'
 import styled from "@emotion/styled";
 import {useEffect} from "react";
 import Countdown from "./Countdown";
+import {color} from "../../theme/colors";
 
 const Section = styled.div`
+  background-color:  ${color.background};
   margin: 50px 0;
   display: flex;
   justify-content: center;

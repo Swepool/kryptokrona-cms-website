@@ -1,8 +1,9 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
+import {color} from "../../theme/colors";
 
 const Section = styled.div`
-  background-color: #1d1d1d;
+  background-color: ${color.background};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,10 +37,10 @@ const Card = styled.div`
   width: 30%;
   border-radius: 8px;
   transition: all 250ms;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid ${color.white60};
   
   &:hover {
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid ${color.white80};
   }
 
 
@@ -60,11 +61,11 @@ const CardContent = styled.div`
 const CardTitle = styled.h3`
   margin: 0;
   font-weight: 200;
-  color: rgb(255, 255, 255);
+  color: ${color.white};
 `
 const Text = styled.p`
   font-family: 'Roboto Mono', monospace;
-  color: rgb(151, 151, 151);
+  color: ${color.white60};
   font-weight: 400;
   margin-bottom: 100px;
 `

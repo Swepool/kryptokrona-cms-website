@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from "@emotion/styled";
 import {HiOutlineMenu} from "react-icons/all";
 import XkrLogo from '../../images/Xkrlogo.svg'
+import {color} from "../../theme/colors";
 
 const Nav = styled.div`
   height: 80px;
@@ -10,14 +11,14 @@ const Nav = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgba(29, 29, 29, 0.50);
+  background-color: ${color.darkgrey50};
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   z-index: 1;
   margin-top: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid ${color.divide};
 `
 
 const NavWrapper = styled.div`
@@ -38,7 +39,7 @@ const Brand = styled.a`
   display: flex;
   justify-content: center;
   font-size: 24px;
-  color: white;
+  color: ${color.white};
   font-weight: 400;
   transition: 250ms;
   text-decoration: none;
@@ -62,17 +63,17 @@ const Navigation = styled.div`
 
 const NavButton = styled.a`
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${color.white60};
   padding: 8px;
   transition: 250ms;
   text-decoration: none;
 
   &:hover {
     cursor: pointer;
-    text-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 10px ${color.white};
   }
 `
-
+//RGB BAR AT TOP, STARTS AT #5f86f2
 const Rgb = styled.div`
   width: 100%;
   height: 2px;
@@ -85,7 +86,7 @@ const Rgb = styled.div`
 const Hamburger = styled.div`
   display: none;
   cursor: pointer;
-  color: white;
+  color: ${color.white};
 
   @media screen and (max-width: 579px) {
     display: block;

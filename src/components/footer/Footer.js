@@ -2,11 +2,12 @@ import * as React from 'react'
 import styled from "@emotion/styled";
 import {FaDiscord, FaTelegram, FaTwitter} from 'react-icons/fa'
 import analytics from '../../images/Analytics.png'
+import {color} from "../../theme/colors";
 
 const Section = styled.footer`
-  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  border-top: 1px solid ${color.divide};
   width: 100%;
-  background-color: #1d1d1d;
+  background-color: ${color.background};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,14 +73,14 @@ const NavList = styled.ul`
 `
 
 const NavTitle = styled.h3`
-  color: white;
+  color: ${color.white};
   font-size: 1.25rem;
   font-weight: 400;
   margin-top: 0;
 `
 
 const ListItem = styled.h3`
-  color: rgba(255, 255, 255, 0.5);
+  color: ${color.white60};
   font-weight: 200;
   font-size: 1rem;
   font-family: 'Roboto Mono', monospace;
@@ -87,14 +88,14 @@ const ListItem = styled.h3`
   text-decoration: none;
 
   &:hover {
-    color: #fff;
+    color: ${color.white};
     cursor: pointer;
   }
 `
 
 const SubTitle = styled.p`
   font-family: 'Roboto Mono', monospace;
-  color: rgba(255, 255, 255, 0.53);
+  color: ${color.white60};
   font-weight: 200;
   margin: 0;
   text-align: end;

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import {useEffect} from "react";
+import {color} from "../../theme/colors";
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,12 +21,12 @@ const Title = styled.h3`
 `
 const Percentage = styled.h3`
   font-family: 'Roboto Mono', monospace;
-  color: #5ff281;
+  color: ${color.green};
   font-weight: 200;
 `
 const Time = styled.h3`
   font-family: 'Roboto Mono', monospace;
-  color: #979797;
+  color: ${color.white60};
   font-weight: 200;
 `
 const Goal = styled.div`
@@ -39,8 +40,8 @@ const Goal = styled.div`
 `
 const Progress = styled.div`
   animation: load 3s normal forwards;
-  box-shadow: 0 10px 40px -10px #fff;
-  background-color: rgba(255, 255, 255, 0.795);
+  box-shadow: 0 10px 40px -10px ${color.white};
+  background-color: ${color.white80};
   height: 10px;
   border-radius: 10em;
   width: 8%;

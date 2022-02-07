@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import ArtImg from '../../images/art.png';
 import Fillbutton from "../../components/buttons/Button";
 import Borderbutton from "../../components/buttons/Borderbutton";
+import {color} from "../../theme/colors";
 
 
 const Section = styled.div`
@@ -11,7 +12,7 @@ const Section = styled.div`
   justify-content: center;
   align-items: start;
   width: 100%;
-  background-color: #1d1d1d;
+  background-color: ${color.background};
   padding-top: 15em;
   padding-bottom: 10em;
 
@@ -52,7 +53,7 @@ const TextContent = styled.div`
 
 const Text = styled.p`
   font-family: 'Roboto Mono', monospace;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${color.darkgrey50};
   line-height: 1.75rem;
 `
 

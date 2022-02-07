@@ -2,16 +2,17 @@ import * as React from 'react'
 import styled from "@emotion/styled";
 import {FaGithub} from "react-icons/all";
 import {useEffect} from "react";
+import {color} from "../../theme/colors";
 
 const Section = styled.div`
-  background-color: #1d1d1d;
+  background-color: ${color.background};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 100px 0;
   margin-top: 50px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid ${color.divide};
 `
 
 const Wrapper = styled.div`
@@ -45,19 +46,19 @@ const TextWrapper = styled.div`
 `
 
 const Title = styled.h2`
-  color: rgb(255, 255, 255);
+  color: ${color.white};
   font-weight: 400;
   margin: 0;
 `
 
 const SubTitle = styled.h2`
-  color: rgba(255, 255, 255, 0.5);
+  color: ${color.white80};
   font-weight: 400;
   margin: 0;
 `
 
 const Text = styled.p`
-  color: rgba(255, 255, 255, 0.5);
+  color: ${color.white60};
   font-family: 'Roboto Mono', monospace;
 `
 
@@ -78,7 +79,7 @@ const Button = styled.a`
 
   &:hover {
     cursor: pointer;
-    background-color: #919191;
+    background-color: ${color.white60};
   }
 `
 
@@ -99,7 +100,7 @@ const Card = styled.div`
   height: 150px;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid ${color.white60};
   border-radius: 10px;
   padding: 20px;
 
@@ -132,17 +133,17 @@ const UserName = styled.h3`
 
 const CommitTitle = styled.h3`
   margin: 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${color.white60};
   font-weight: 400;
 `
 
 const Addition = styled.p`
-  color: #5FF281;
+  color: ${color.green};
   font-family: 'Roboto Mono', monospace;
 `
 
 const Deletion = styled.p`
-  color: #F25F61;
+  color: ${color.red};
   font-family: 'Roboto Mono', monospace;
 `
 
@@ -150,15 +151,15 @@ const RoundButton = styled.a`
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: ${color.white60};
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 250ms;
-  color: #1d1d1d;
+  color: ${color.background};
   
   &:hover {
-    background-color: white;
+    background-color: ${color.white};
     cursor: pointer;
   }
 `
