@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 
 const Blog = () => {
     return(
-        <Layout pageTitle="Blog">
+        <Layout pageTitle="Guides">
             <Section>
                 <Wrapper>
                     <GuidesRoll/>
