@@ -3,7 +3,8 @@ import Layout from "../components/Layout";
 import Hero from "../page-components/index/Hero";
 import Features from "../page-components/index/Features";
 import Nodestats from "../components/Statusbar/Nodestats";
-import CTAdesktop from "../page-components/wallet/CTAdesktop";
+import CTAdesktop from "../page-components/index/CTAdesktop";
+import Badges from "../page-components/index/Badges";
 
 
 const index = () => {
@@ -13,6 +14,7 @@ const index = () => {
           <Features/>
           <Nodestats/>
           <CTAdesktop/>
+          <Badges/>
       </Layout>
   );
 };
