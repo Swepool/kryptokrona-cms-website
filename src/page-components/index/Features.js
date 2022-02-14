@@ -94,7 +94,7 @@ const Features = () => {
                 <Card>
                     <CardContent>
                         <CardTitle>Crypto Community</CardTitle>
-                        <Text>You can get assistance with Kryptokrona, around the clock, every day of the week in our Discord server. Welcome for discussions.</Text>
+                        <Text>Strong local roots with an understanding of politics, culture & language. A feature that should not be underestimated.</Text>
                     </CardContent>
                 </Card>
 
@@ -104,7 +104,7 @@ const Features = () => {
                         <Text>Kryptokrona launched as an open-source alternative to a digital e-krona/e-krone and the growing cashless society in the Nordics.</Text>
                     </CardContent>
                 </Card>
-                
+
                 <Card>
                     <CardContent>
                         <CardTitle>No middleman</CardTitle>
