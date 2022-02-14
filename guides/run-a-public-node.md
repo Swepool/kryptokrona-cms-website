@@ -1,5 +1,5 @@
 ---
-path: /run-a-node
+slug: run-a-node
 layout: blog
 title: Run a public node
 date: 2022-01-15T23:04:47.018Z

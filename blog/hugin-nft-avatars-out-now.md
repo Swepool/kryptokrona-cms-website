@@ -1,5 +1,5 @@
 ---
-path: /hugin-avatars
+slug: hugin-avatars
 layout: blog
 title: Hugin NFT avatars out now!
 date: 2021-12-22T14:08:02.402Z

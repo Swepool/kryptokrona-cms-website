@@ -1,5 +1,5 @@
 ---
-path: /first
+slug: first
 layout: blog
 title: Testar
 date: 2022-01-13T10:11:52.119Z

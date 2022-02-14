@@ -1,5 +1,5 @@
 ---
-path: /second
+slug: second
 layout: blog
 title: Need coffee
 date: 2022-01-13T11:03:23.182Z

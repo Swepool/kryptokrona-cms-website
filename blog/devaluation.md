@@ -1,5 +1,5 @@
 ---
-path: /devaluation
+slug: devaluation
 layout: blog
 title: Devaluation!
 date: 2020-11-22T14:10:48.517Z

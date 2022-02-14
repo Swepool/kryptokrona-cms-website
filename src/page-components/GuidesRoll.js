@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 const BlogWrapper = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 const Card = styled.div`
@@ -44,7 +44,7 @@ class GuidesRoll extends React.Component {
             <BlogWrapper>
                 {posts &&
                     posts.map(({ node: post }) => (
-                        <Link style={{width: "100%"}} to={post.frontmatter.path}>
+                        <Link style={{width: "100%"}} to={post.frontmatter.slug}>
                         <Card key={post.id}>
 
                                 <Title>{post.frontmatter.title}</Title>
@@ -78,9 +78,10 @@ query GuidesRollQuery {
       node {
         id
         frontmatter {
-          path
+          slug
           title
           date(formatString: "MMMM DD, YYYY")
+          tags
         }
       }
     }

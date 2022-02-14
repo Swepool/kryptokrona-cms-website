@@ -1,5 +1,5 @@
 ---
-path: /third
+slug: third
 layout: blog
 title: Hugin - New steps
 date: 2022-01-15T11:03:34.304Z
