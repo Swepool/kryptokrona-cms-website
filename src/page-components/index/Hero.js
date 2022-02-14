@@ -77,7 +77,7 @@ const Hero = () => {
             <Container>
                 <Art src={ArtImg}/>
                 <TextContent>
-                    <Text>Kryptokrona exists to secure and simplify our future economic system. Sending and receiving money should not be expensive or slow.
+                    <Text>A Nordic crypto to secure and simplify our future economic system. Sending and receiving money should not be expensive or slow.
                         We work with open source code that allows you to be involved and improve the money of the future.</Text>
                     <ButtonWrapper>
                         <Fillbutton addClass="rgb" text="Hugin" url="https://hugin.chat"/>

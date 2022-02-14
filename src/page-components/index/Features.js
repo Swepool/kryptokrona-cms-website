@@ -33,7 +33,7 @@ const Card = styled.div`
   justify-content: space-between;
   box-sizing: border-box;
   background-color: transparent;
-  height: 180px;
+  height: 210px;
   width: 30%;
   border-radius: 8px;
   transition: all 250ms;
@@ -46,6 +46,7 @@ const Card = styled.div`
 
   @media screen and (max-width: 1000px) {
     width: 46%;
+    height: 220px;
   }
 
   @media screen and (max-width: 629px) {
@@ -58,7 +59,7 @@ const CardContent = styled.div`
   padding: 20px;
 `
 
-const CardTitle = styled.h3`
+const CardTitle = styled.h2`
   margin: 0;
   font-weight: 200;
   color: ${color.white};
@@ -77,44 +78,44 @@ const Features = () => {
 
                 <Card>
                     <CardContent>
-                        <CardTitle>Private money</CardTitle>
-                        <Text>All transactions are private. Users can share view keys to give trusted parties access to to share account information.</Text>
+                        <CardTitle>Nordic Crypto</CardTitle>
+                        <Text>A growing cryptocurrency from the Nordics, you'll find people from Sweden, Norway, Denmark, Finland, but also an international audience.</Text>
                     </CardContent>
 
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>Quick & efficient</CardTitle>
-                        <Text>Our network processes new transactions every 90 seconds, in comparison to Bitcoins 10 minute delay.</Text>
+                        <CardTitle>Decentralized </CardTitle>
+                        <Text>Kryptokrona adds value to the region as a robust decentralized payment and communication system. Securing our freedom as citizens.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>The peoples currency</CardTitle>
-                        <Text>You can assist Kryptokrona. Through mining you can create Kryptokrona and store them wherever you want to.</Text>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardContent>
-                        <CardTitle>Peer to peer</CardTitle>
-                        <Text>The Kryptokrona isn’t dependent on central banks or servers, thus less fragile than todays systems.</Text>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardContent>
-                        <CardTitle>Transparency</CardTitle>
-                        <Text>Our source code is open for everyone to view and our community is open for anyone interested.</Text>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardContent>
-                        <CardTitle>Technical support</CardTitle>
+                        <CardTitle>Crypto Community</CardTitle>
                         <Text>You can get assistance with Kryptokrona, around the clock, every day of the week in our Discord server. Welcome for discussions.</Text>
+                    </CardContent>
+                </Card>
+
+                <Card>
+                    <CardContent>
+                        <CardTitle>A response</CardTitle>
+                        <Text>Kryptokrona launched as an open-source alternative to a digital e-krona/e-krone and the growing cashless society in the Nordics.</Text>
+                    </CardContent>
+                </Card>
+                
+                <Card>
+                    <CardContent>
+                        <CardTitle>No middleman</CardTitle>
+                        <Text>The Kryptokrona isn’t dependent on our central banks or servers, thus less fragile than todays financial systems.</Text>
+                    </CardContent>
+                </Card>
+
+                <Card>
+                    <CardContent>
+                        <CardTitle>Private</CardTitle>
+                        <Text>The basics of Kryptokrona allow users to stay anonymous by default, to send value and data without being revealed or traced.</Text>
                     </CardContent>
                 </Card>
 
