@@ -28,7 +28,6 @@ const Wrapper = styled.div`
 const Card = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   box-sizing: border-box;
   background-color: transparent;
   height: 180px;
@@ -59,13 +58,12 @@ const CardContent = styled.div`
 const CardTitle = styled.h3`
   margin: 0;
   font-weight: 200;
-  color: rgb(151, 151, 151);
+  color: #fff;
 `
 const Text = styled.p`
   font-family: 'Roboto Mono', monospace;
   color: rgb(151, 151, 151);
   font-weight: 400;
-  margin-bottom: 100px;
 `
 
 const AboutCards = () => {
@@ -75,8 +73,10 @@ const AboutCards = () => {
 
                 <Card>
                     <CardContent>
-                        <CardTitle> 🔒 Supply</CardTitle>
-                        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
+                        <CardTitle> Max supply</CardTitle>
+                        <Text>1,000,000,000</Text>
+                        <CardTitle> Circulating</CardTitle>
+                        <Text>300,000,000</Text>
                     </CardContent>
 
                 </Card>
