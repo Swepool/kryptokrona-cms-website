@@ -2,12 +2,11 @@
 slug: devaluation
 layout: blog
 title: Devaluation!
-date: 2020-11-22T14:10:48.517Z
+date: 2020-11-22
 thumbnail: /content/ingveshead.png
 summary: We, the maintainers of XKR, have wondered whether the total supply of
   XKR was optimal at 1000 billion.
 tags:
-  - Blog
   - News
 ---
 ## Devaluation!
