@@ -7,6 +7,7 @@ module.exports = {
         url: "https://www.kryptokrona.org",
         image: "/static/content/ogimage.png",
         twitterUsername: "@kryptokrona",
+        siteUrl: `https://www.kryptokrona.org`,
     },
     plugins: [
         'gatsby-plugin-emotion',
