@@ -72,7 +72,7 @@ const query = () => (
 query GuidesRollQuery {
   allMarkdownRemark(
     sort: {order: DESC, fields: [frontmatter___date]}
-    filter: {frontmatter: {title: {ne: ""}, summary: {ne: ""}}, fileAbsolutePath: {glob: "**/guides/*.md"}}
+    filter: {frontmatter: {title: {ne: ""}}, fileAbsolutePath: {glob: "**/guides/*.md"}}
   ) {
     edges {
       node {

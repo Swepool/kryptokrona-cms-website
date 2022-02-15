@@ -20,7 +20,6 @@ const Home = ( { children, pageTitle, pageDescription } ) => {
         <>
                 <Sidebar isOpen={isOpen} toggle={toggle} />
                 <Navbar toggle={toggle} />
-                <AlertBanner text="This site is under construction" emoji="🤙"/>
                 {children}
                 <Contribute/>
                 <Footer/>

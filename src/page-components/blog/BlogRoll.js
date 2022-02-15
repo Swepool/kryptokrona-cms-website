@@ -102,7 +102,7 @@ const query = () => (
 query BlogRollQuery {
   allMarkdownRemark(
     sort: {order: DESC, fields: [frontmatter___date]}
-    filter: {frontmatter: {title: {ne: ""}, summary: {ne: ""}}, fileAbsolutePath: {glob: "**/blog/*.md"}}
+    filter: {frontmatter: {title: {ne: ""}}, fileAbsolutePath: {glob: "**/blog/*.md"}}
   ) {
     edges {
       node {

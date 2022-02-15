@@ -27,8 +27,6 @@ const BlogWrapper = styled.div`
   gap: 40px;
   flex-wrap: wrap;
   padding: 0 40px;
-  
-  
 `;
 
 const Card = styled.div`

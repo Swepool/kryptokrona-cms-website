@@ -74,7 +74,6 @@ const Countdown = () => {
                     }
                     render(data.height, goal)
                     document.getElementById('blocks').textContent = numberWithCommas(goal) + " Blocks"
-                    console.log(goal)
                 })
         }
 

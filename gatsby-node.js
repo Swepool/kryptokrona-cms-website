@@ -9,7 +9,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
     const result = await graphql(`
 {
   blogs: allMarkdownRemark(
-    filter: {frontmatter: {layout: {eq: "blog"}}}
+    filter: {fileAbsolutePath: {glob: "**/blog/*.md"}}
     sort: {order: DESC, fields: frontmatter___date}
   ) {
     edges {
@@ -21,7 +21,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
     }
   }
   guides: allMarkdownRemark(
-    filter: {frontmatter: {layout: {eq: "guide"}}}
+    filter: {fileAbsolutePath: {glob: "**/guides/*.md"}}
     sort: {order: DESC, fields: frontmatter___date}
   ) {
     edges {
