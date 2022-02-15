@@ -40,7 +40,7 @@ export default function Template({
     const {frontmatter, html} = markdownRemark
     return (
         <Layout>
-            <SEO title={frontmatter.title}/>
+            <SEO title={frontmatter.title} article={true}/>
             <Section>
                 <Wrapper>
                     <div className="blog-post-container">
