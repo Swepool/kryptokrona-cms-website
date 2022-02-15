@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import Wallet from '/src/images/wallet.png'
+import Hugin from '/src/images/HuginChat.png'
 import Fillbutton from "../../components/buttons/Button";
 import { color } from "../../theme/colors";
 
@@ -66,14 +66,14 @@ const CTAhugin = () => {
         <Section>
             <Wrapper>
                 <TextWrapper>
-                    <Title>Get a wallet</Title>
+                    <Title>Hide with Hugin</Title>
                     <Text>You store your Kryptokrona using a special program, a so-called wallet. If you have a PC or a mac the best option is our desktop wallet.</Text>
                     <ButtonWrapper>
                         <Fillbutton text="Download" url="https://hugin.chat/"/>
                     </ButtonWrapper>
                     <SubText>→ Make sure to backup your keys</SubText>
                 </TextWrapper>
-                <WalletImage src={Wallet}/>
+                <WalletImage src={Hugin}/>
             </Wrapper>
         </Section>
     )
