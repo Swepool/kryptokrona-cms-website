@@ -2,6 +2,8 @@ import * as React from 'react'
 import styled from "@emotion/styled";
 import Layout from "../components/Layout";
 import AboutCards from "../page-components/AboutCards";
+import Countdown from "../components/Statusbar/Countdown";
+import Nodestats from "../components/Statusbar/Nodestats";
 
 
 const Section = styled.div`
@@ -69,6 +71,7 @@ const About= () => {
                 </Wrapper>
             </Section>
             <AboutCards/>
+            <Nodestats/>
         </Layout>
 
     )
