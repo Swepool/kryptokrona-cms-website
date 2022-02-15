@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import ArtImg from '../../images/art.png';
+import ArtImg from '../../images/art.webp';
 import Fillbutton from "../../components/buttons/Button";
 import Borderbutton from "../../components/buttons/Borderbutton";
 import {color} from "../../theme/colors";
@@ -71,10 +71,15 @@ const Art = styled.img`
   filter: brightness(1.3);
 `
 
+const Title = styled.h1`
+  display: none;
+`
+
 const Hero = () => {
     return (
         <Section>
             <Container>
+                <Title>The nordic cryptocurrency for the future.</Title>
                 <Art src={ArtImg}/>
                 <TextContent>
                     <Text>A Nordic Cryptocurrency to secure and simplify our future economic system. Sending and receiving money should not be expensive or slow.

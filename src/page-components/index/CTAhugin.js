@@ -55,8 +55,8 @@ const SubText = styled.p`
   color: ${color.green};
 `
 
-const WalletImage = styled.img`
-  max-width: 500px;
+const HuginImage = styled.img`
+  max-width: 550px;
   margin-top: 30px;
 `
 
@@ -73,7 +73,7 @@ const CTAhugin = () => {
                     </ButtonWrapper>
                     <SubText>→ Make sure to backup your keys</SubText>
                 </TextWrapper>
-                <WalletImage src={Hugin}/>
+                <HuginImage src={Hugin}/>
             </Wrapper>
         </Section>
     )
