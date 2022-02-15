@@ -4,11 +4,15 @@ import {color} from "../theme/colors";
 
 const Section = styled.div`
   background-color: ${color.navbarBG};
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 45px;
+  width: 100%;
   margin-top: 80px;
   border-bottom: 1px solid ${color.divide};
 `
