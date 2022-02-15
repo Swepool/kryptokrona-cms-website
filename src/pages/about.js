@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import AboutCards from "../page-components/AboutCards";
 import Countdown from "../components/Statusbar/Countdown";
 import Nodestats from "../components/Statusbar/Nodestats";
+import SEO from "../components/Seo";
 
 
 const Section = styled.div`
@@ -57,7 +58,8 @@ const Text = styled.p`
 
 const About= () => {
     return (
-        <Layout pageTitle="About">
+        <Layout>
+            <SEO title="About"/>
             <Section>
                 <Wrapper>
                     <Title>About</Title>

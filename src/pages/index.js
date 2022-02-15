@@ -6,14 +6,15 @@ import Nodestats from "../components/Statusbar/Nodestats";
 import CTAdesktop from "../page-components/index/CTAdesktop";
 import Badges from "../page-components/index/Badges";
 import CTAhugin from "../page-components/index/CTAhugin";
-import BlogRoll from "../page-components/blog/BlogRoll";
 import LatestBlog from "../page-components/index/LatestBlog";
+import SEO from "../components/Seo";
 
 
 const index = () => {
   return (
       <Layout>
-        <Hero/>
+          <SEO title="Kryptokrona"/>
+          <Hero/>
           <Features/>
           <Nodestats/>
           <CTAhugin/>

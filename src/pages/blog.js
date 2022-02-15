@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from "../components/Layout";
 import BlogRoll from "../page-components/blog/BlogRoll";
 import styled from "@emotion/styled";
+import SEO from "../components/Seo";
 
 const Section = styled.div`
   background-color: #1d1d1d;
@@ -31,7 +32,8 @@ const Wrapper = styled.div`
 
 const Blog = () => {
     return(
-        <Layout pageTitle="Blog">
+        <Layout>
+            <SEO title="Blog"/>
             <Section>
                 <Wrapper>
                     <BlogRoll/>

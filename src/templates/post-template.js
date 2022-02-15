@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import styled from "@emotion/styled";
 
 import '../theme/post-theme.css'
+import SEO from "../components/Seo";
 
 const Section = styled.div`
   background-color: #1d1d1d;
@@ -38,7 +39,8 @@ export default function Template({
     const {markdownRemark} = data // data.markdownRemark holds your post data
     const {frontmatter, html} = markdownRemark
     return (
-        <Layout pageTitle={frontmatter.title}>
+        <Layout>
+            <SEO title={frontmatter.title}/>
             <Section>
                 <Wrapper>
                     <div className="blog-post-container">

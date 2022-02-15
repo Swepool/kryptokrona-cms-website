@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Navbar from "./navbar/Navbar";
 import Sidebar from "./navbar/Sidebar";
 import Footer from './footer/Footer'
-import Seo from "./Seo";
 import Contribute from "./footer/Contribute";
 
 import '../theme/animations.css'
@@ -11,7 +10,7 @@ import '../theme/fonts.css'
 import AlertBanner from "./AlertBanner";
 
 
-const Home = ( { children, pageTitle } ) => {
+const Home = ( { children, pageTitle, pageDescription } ) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
@@ -19,7 +18,6 @@ const Home = ( { children, pageTitle } ) => {
     };
     return (
         <>
-                <Seo title={pageTitle}/>
                 <Sidebar isOpen={isOpen} toggle={toggle} />
                 <Navbar toggle={toggle} />
                 <AlertBanner text="This site is under construction" emoji="🤙"/>
