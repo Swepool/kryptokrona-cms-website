@@ -1,5 +1,6 @@
 ---
 slug: mining-intro
+layout: guide
 title: Mining Intro
 date: 2022-01-16T11:24:58.471Z
 tags:
