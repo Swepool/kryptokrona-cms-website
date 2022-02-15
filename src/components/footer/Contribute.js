@@ -203,7 +203,7 @@ const Contribute =() => {
                     <Button href="https://github.com/kryptokrona/">Github <FaGithub size="2em"/></Button>
                 </TextWrapper>
                 <CardWrapper>
-                    <SubTitle>Latest Commit</SubTitle>
+                    <SubTitle>Latest Contribution </SubTitle>
                     <Card>
                         <CardTextWrapper>
                             <CommitTitle id="commitTitle"/>
