@@ -67,7 +67,7 @@ const CTAdesktop = () => {
             <Wrapper>
                 <TextWrapper>
                     <Title>Download our wallet</Title>
-                    <Text>Using our wallet you can store, send and receive XKR.
+                    <Text>Using our wallet you can store, send and receive Kryptokrona.
                     <br></br>We currently have desktop wallets for Windows, Linux and Mac!</Text>
                     <ButtonWrapper>
                         <Fillbutton text="Download"/>
