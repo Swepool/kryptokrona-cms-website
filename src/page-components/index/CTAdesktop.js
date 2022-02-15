@@ -29,6 +29,12 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 50%;
+
+  @media screen and (max-width: 829px) {
+    flex-direction: column;
+    max-width: 100%;
+  }
 `
 
 const ButtonWrapper = styled.div`
