@@ -3,9 +3,9 @@ import {graphql} from "gatsby"
 import BlogHeader from "../page-components/blog/BlogHeader";
 import Layout from "../components/Layout";
 import styled from "@emotion/styled";
+import Seo from "../components/Seo";
 
 import '../theme/post-theme.css'
-import SEO from "../components/Seo";
 
 const Section = styled.div`
   background-color: #1d1d1d;
@@ -40,7 +40,7 @@ export default function Template({
     const {frontmatter, html} = markdownRemark
     return (
         <Layout>
-            <SEO title={frontmatter.title} article={true}/>
+            <Seo title={frontmatter.title} article={true}/>
             <Section>
                 <Wrapper>
                     <div className="blog-post-container">

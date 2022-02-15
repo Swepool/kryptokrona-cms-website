@@ -4,7 +4,7 @@ import ArtImg from '../images/mining.png';
 import Layout from "../components/Layout";
 import {FaLinux, FaWindows} from "react-icons/all";
 import GenerateConfig from "../page-components/mining/GenerateConfig";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
 const Section = styled.div`
   overflow: hidden;
@@ -91,7 +91,7 @@ const Art = styled.img`
 const Hero = () => {
     return (
         <Layout>
-            <SEO title="Mining"/>
+            <Seo title="Mining"/>
             <Section>
                 <Wrapper>
                     <ContentWrapper>

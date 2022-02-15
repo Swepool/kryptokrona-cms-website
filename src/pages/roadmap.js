@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import RoadmapSection from "../page-components/roadmap/RoadmapSection";
 import Nodestats from "../components/Statusbar/Nodestats";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
 
 
@@ -10,7 +10,7 @@ import SEO from "../components/Seo";
 const RoadmapPage = () => {
   return(
       <Layout>
-          <SEO title="Roadmap"/>
+          <Seo title="Roadmap"/>
         <RoadmapSection/>
           <Nodestats/>
       </Layout>

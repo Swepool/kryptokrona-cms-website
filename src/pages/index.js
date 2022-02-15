@@ -7,13 +7,13 @@ import CTAdesktop from "../page-components/index/CTAdesktop";
 import Badges from "../page-components/index/Badges";
 import CTAhugin from "../page-components/index/CTAhugin";
 import LatestBlog from "../page-components/index/LatestBlog";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
 
 const index = () => {
   return (
       <Layout>
-          <SEO title="Kryptokrona"/>
+          <Seo title="Kryptokrona"/>
           <Hero/>
           <Features/>
           <Nodestats/>

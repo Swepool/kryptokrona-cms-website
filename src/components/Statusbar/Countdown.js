@@ -24,11 +24,6 @@ const Percentage = styled.h3`
   color: ${color.green};
   font-weight: 200;
 `
-const Time = styled.h3`
-  font-family: 'Roboto Mono', monospace;
-  color: ${color.white60};
-  font-weight: 200;
-`
 const Goal = styled.div`
     display: flex;
     align-items: center;
@@ -82,11 +77,6 @@ const Countdown = () => {
 
             //Calc percentage
             const percentageToGoal = (((height / goal) * 100).toFixed(2)) + "%"
-
-            //Calc time left
-            const blocksLeft = goal - height
-            const timeleft = blocksLeft * 90
-            const daysLeft = "est." + " " + (((timeleft / 60) / 60) / 24).toFixed(0) + " Days"
 
             //Render
             document.getElementById('percentage').textContent = percentageToGoal
