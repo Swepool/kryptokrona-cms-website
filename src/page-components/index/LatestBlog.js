@@ -81,7 +81,7 @@ const Date = styled.p`
   color: rgba(255, 255, 255, 0.6);
 `;
 
-class BlogRoll extends React.Component {
+class LatestBlog extends React.Component {
     render() {
         const { data } = this.props;
         const { edges: posts } = data.allMarkdownRemark;
@@ -110,7 +110,7 @@ class BlogRoll extends React.Component {
     }
 }
 
-BlogRoll.propTypes = {
+LatestBlog.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,
@@ -145,7 +145,7 @@ query LatestBlogQuery {
 }
 
     `}
-        render={(data, count) => <BlogRoll data={data} count={count} />}
+        render={(data, count) => <LatestBlog data={data} count={count} />}
     />
 )
 
