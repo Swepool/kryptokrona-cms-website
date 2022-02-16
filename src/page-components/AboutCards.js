@@ -103,7 +103,7 @@ const AboutCards = () => {
                         <CardTitle> Max supply</CardTitle>
                         <Text>1,000,000,000 XKR</Text>
                         <CardTitle> Circulating</CardTitle>
-                        <Text id="circ-supply">300,000,000</Text>
+                        <Text id="circ-supply">-</Text>
                     </CardContent>
 
                 </Card>

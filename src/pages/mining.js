@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import {FaLinux, FaWindows} from "react-icons/all";
 import GenerateConfig from "../page-components/mining/GenerateConfig";
 import Seo from "../components/Seo";
+import Nodestats from "../components/Statusbar/Nodestats";
 
 const Section = styled.div`
   overflow: hidden;
@@ -108,6 +109,7 @@ const Hero = () => {
                     </ImageWrapper>
                 </Wrapper>
             </Section>
+            <Nodestats/>
         </Layout>
     )
 }

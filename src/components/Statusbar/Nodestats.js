@@ -75,7 +75,7 @@ const Nodestats = () => {
             });
         async function calcPrice() {
             let xkrPrice
-            //get price of xkr on exbitron
+            //get price of xkr on CoinPaprika
             await fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
                 .then(res => {
                     if(!res.ok) {
