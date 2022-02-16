@@ -4,6 +4,7 @@ import ArtImg from '../../images/art.webp';
 import Fillbutton from "../../components/buttons/Button";
 import Borderbutton from "../../components/buttons/Borderbutton";
 import {color} from "../../theme/colors";
+import {Link} from "gatsby";
 
 
 const Section = styled.div`
@@ -86,7 +87,7 @@ const Hero = () => {
                         We work with open source code that allows you to be involved and improve the money of the future.</Text>
                     <ButtonWrapper>
                         <Fillbutton addClass="rgb" text="Hugin" url="https://hugin.chat"/>
-                        <Borderbutton text="Roadmap" url="/roadmap"/>
+                        <Link to="/roadmap" style={{display: "flex", justifyContent: "center", alignContent: "center"}}><Borderbutton text="Roadmap" url="/roadmap"/></Link>
                     </ButtonWrapper>
                 </TextContent>
             </Container>
