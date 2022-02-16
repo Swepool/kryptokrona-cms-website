@@ -66,8 +66,9 @@ const CTAdesktop = () => {
         <Section>
             <Wrapper>
                 <TextWrapper>
-                    <Title>Get a wallet</Title>
-                    <Text>You store your Kryptokrona using a special program, a so-called wallet. If you have a PC or a mac the best option is our desktop wallet.</Text>
+                    <Title>Download our wallet</Title>
+                    <Text>Using our wallet you can store, send and receive Kryptokrona.
+                    <br></br>We currently have desktop wallets for Windows, Linux and Mac!</Text>
                     <ButtonWrapper>
                         <Fillbutton text="Download"/>
                     </ButtonWrapper>

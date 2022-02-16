@@ -67,11 +67,11 @@ const CTAhugin = () => {
             <Wrapper>
                 <TextWrapper>
                     <Title>Hide with Hugin</Title>
-                    <Text>You store your Kryptokrona using a special program, a so-called wallet. If you have a PC or a mac the best option is our desktop wallet.</Text>
+                    <Text>Hugin is a messaging service where messages are stored on the kryptokrona blockchain.<br></br>
+                    Your messages are secured with military grade encryption so that only you and your chat partner have the possibility to read them.</Text>
                     <ButtonWrapper>
                         <Fillbutton text="Download" url="https://hugin.chat/"/>
                     </ButtonWrapper>
-                    <SubText>→ Make sure to backup your keys</SubText>
                 </TextWrapper>
                 <HuginImage src={Hugin}/>
             </Wrapper>
