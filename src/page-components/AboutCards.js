@@ -110,35 +110,35 @@ const AboutCards = () => {
 
                 <Card>
                     <CardContent>
-                        <CardTitle> 🤙 Algorithm</CardTitle>
+                        <CardTitle>Algorithm</CardTitle>
+                        <Text>We currently running on CryptoNight-Turtle (CN-Pico), which originated from ByteCoin.</Text>
+                    </CardContent>
+                </Card>
+
+                <Card>
+                    <CardContent>
+                        <CardTitle>Blocktime</CardTitle>
+                        <Text>Our network processes new transactions every 90 seconds, in comparison to Bitcoins 10 minute delay.</Text>
+                    </CardContent>
+                </Card>
+
+                <Card>
+                    <CardContent>
+                        <CardTitle>Lorem</CardTitle>
                         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle> 🗂 Blocktime</CardTitle>
+                        <CardTitle>Lorem</CardTitle>
                         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>🐥 Peer to peer</CardTitle>
-                        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardContent>
-                        <CardTitle>😎 Transparency</CardTitle>
-                        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardContent>
-                        <CardTitle>😎 Technical support</CardTitle>
+                        <CardTitle>Lorem</CardTitle>
                         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
                     </CardContent>
                 </Card>
