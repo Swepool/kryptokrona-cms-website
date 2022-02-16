@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
+import {useEffect} from "react";
 
 const Section = styled.div`
   background-color: #1d1d1d;
@@ -67,6 +68,32 @@ const Text = styled.p`
 `
 
 const AboutCards = () => {
+
+    useEffect(() => {
+        async function getSupply() {
+            let xkrSupply
+
+            //add commas to numbers
+            function numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            //Get supply from CoinPaprika
+            await fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
+                .then(res => {
+                    if(!res.ok) {
+                        throw Error("Couldn't fetch CoinPaprika")
+                    } return res.json()
+                })
+                .then(data => {
+                    xkrSupply = (data.total_supply)
+                })
+                .catch(err => console.log(err))
+            document.getElementById("circ-supply").textContent = `${numberWithCommas(xkrSupply)} XKR`
+        }
+        getSupply()
+    });
+
     return (
         <Section>
             <Wrapper>
@@ -74,9 +101,9 @@ const AboutCards = () => {
                 <Card>
                     <CardContent>
                         <CardTitle> Max supply</CardTitle>
-                        <Text>1,000,000,000</Text>
+                        <Text>1,000,000,000 XKR</Text>
                         <CardTitle> Circulating</CardTitle>
-                        <Text>300,000,000</Text>
+                        <Text id="circ-supply">300,000,000</Text>
                     </CardContent>
 
                 </Card>
