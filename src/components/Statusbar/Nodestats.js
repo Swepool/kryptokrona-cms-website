@@ -75,30 +75,19 @@ const Nodestats = () => {
             });
         async function calcPrice() {
             let xkrPrice
-            let satPrice
             //get price of xkr on exbitron
-            await fetch("https://www.exbitron.com/api/v2/peatio/coinmarketcap/trades/XKR_USDT")
+            await fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
                 .then(res => {
                     if(!res.ok) {
-                        throw Error("Couldn't fetch Exbitron")
+                        throw Error("Couldn't fetch CoinPaprika")
                     } return res.json()
                 })
                 .then(data => {
-                    xkrPrice = data[0].price
+                    xkrPrice = (data.quotes.USD.price).toFixed(5)
+
                 })
                 .catch(err => console.log(err))
-            //Get price of bitcoin and convert to price of satoshi
-            await fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
-                .then(res => {
-                    if(!res.ok) {
-                        throw Error("Couldn't fetch Coingecko")
-                    } return res.json()
-                })
-                .then(data => {
-                    satPrice = data.market_data.current_price.usd / 100000000
-                })
-                .catch(err => console.log(err))
-            document.getElementById("price").innerHTML = (xkrPrice / satPrice).toFixed(2) + " Sats"
+            document.getElementById("price").innerHTML = xkrPrice + " USD"
         }
         calcPrice()
     });
@@ -121,7 +110,7 @@ const Nodestats = () => {
                         <Text id="nodes"></Text>
                     </Item>
                     <Item>
-                        <Title>Lowest Price</Title>
+                        <Title>Price</Title>
                         <Text id="price"></Text>
                     </Item>
                 </ItemWrapper>
