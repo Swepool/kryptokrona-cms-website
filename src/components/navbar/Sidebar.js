@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import {IoClose} from "react-icons/all";
+import {Link} from "gatsby";
 
 const SidebarContainer = styled.aside`
   position: fixed;
@@ -77,12 +78,12 @@ const Sidebar = ({ isOpen, toggle }) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink href="/wallet">Wallet</SidebarLink>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/wallet"><SidebarLink>Wallet</SidebarLink></Link>
                     <SidebarLink href="https://hugin.chat">Hugin</SidebarLink>
-                    <SidebarLink href="/mining">Mining</SidebarLink>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/mining"><SidebarLink>Mining</SidebarLink></Link>
                     <SidebarLink href="https://explorer.kryptokrona.se">Explorer</SidebarLink>
-                    <SidebarLink href="blog">Blog</SidebarLink>
-                    <SidebarLink href="/about">About</SidebarLink>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/blog"><SidebarLink>Blog</SidebarLink></Link>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/about"><SidebarLink>About</SidebarLink></Link>
                 </SidebarMenu>
                 <SideBtnWrap style={{display: 'flex', gap: '10px'}}>
                 </SideBtnWrap>

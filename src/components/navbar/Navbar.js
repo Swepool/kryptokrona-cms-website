@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import {HiOutlineMenu} from "react-icons/all";
 import XkrLogo from '../../images/Xkrlogo.svg'
 import {color} from "../../theme/colors";
+import {Link} from "gatsby";
 
 const Nav = styled.div`
   height: 80px;
@@ -99,13 +100,13 @@ const Navbar = ({ toggle }) => {
         <Nav id="home">
             <Rgb className="rgb"/>
             <NavWrapper>
-                <Brand href="/"><img style={{height: "1.5rem"}} src={XkrLogo} alt="Kryptokrona logo"/></Brand>
+                <Link to="/"><Brand><img style={{height: "1.5rem"}} src={XkrLogo} alt="Kryptokrona logo"/></Brand></Link>
                 <Navigation>
-                    <NavButton href="/wallet">Wallet</NavButton>
+                    <Link to="/wallet" ><NavButton>Wallet</NavButton></Link>
                     <NavButton href="https://hugin.chat">Hugin</NavButton>
-                    <NavButton href="/mining">Mining</NavButton>
-                    <NavButton href="/blog">Blog</NavButton>
-                    <NavButton href="/about">About</NavButton>
+                    <Link to="/mining"><NavButton>Mining</NavButton></Link>
+                    <Link to="/blog"><NavButton>Blog</NavButton></Link>
+                    <Link to="/about"><NavButton>About</NavButton></Link>
                 </Navigation>
                 <Hamburger onClick={toggle}><HiOutlineMenu color="#979797" size="1.25em"/></Hamburger>
             </NavWrapper>
