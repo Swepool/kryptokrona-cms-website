@@ -102,11 +102,11 @@ const Navbar = ({ toggle }) => {
             <NavWrapper>
                 <Link to="/"><Brand><img style={{height: "1.5rem"}} src={XkrLogo} alt="Kryptokrona logo"/></Brand></Link>
                 <Navigation>
-                    <Link to="/wallet/" ><NavButton>Wallet</NavButton></Link>
+                    <Link to="/wallet/" ><NavButton rel="nofollow">Wallet</NavButton></Link>
                     <NavButton href="https://hugin.chat">Hugin</NavButton>
-                    <Link to="/mining/"><NavButton>Mining</NavButton></Link>
-                    <Link to="/blog/"><NavButton>Blog</NavButton></Link>
-                    <Link to="/about/"><NavButton>About</NavButton></Link>
+                    <Link to="/mining/"><NavButton rel="nofollow">Mining</NavButton></Link>
+                    <Link to="/blog/"><NavButton rel="nofollow">Blog</NavButton></Link>
+                    <Link to="/about/"><NavButton rel="nofollow">About</NavButton></Link>
                 </Navigation>
                 <Hamburger onClick={toggle}><HiOutlineMenu color="#979797" size="1.25em"/></Hamburger>
             </NavWrapper>
