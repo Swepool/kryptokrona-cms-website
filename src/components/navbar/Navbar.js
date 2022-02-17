@@ -36,7 +36,7 @@ const NavWrapper = styled.div`
     padding: 20px 20px;
   }
 `
-const Brand = styled.a`
+const Brand = styled(Link)`
   display: flex;
   justify-content: center;
   font-size: 24px;
@@ -62,7 +62,7 @@ const Navigation = styled.div`
   }
 `
 
-const NavButton = styled.a`
+const NavButton = styled(Link)`
   border-radius: 5px;
   color: ${color.white60};
   padding: 8px;
@@ -100,13 +100,13 @@ const Navbar = ({ toggle }) => {
         <Nav id="home">
             <Rgb className="rgb"/>
             <NavWrapper>
-                <Link to="/"><Brand><img style={{height: "1.5rem"}} src={XkrLogo} alt="Kryptokrona logo"/></Brand></Link>
+                <Brand to="/"><img style={{height: "1.5rem"}} src={XkrLogo} alt="Kryptokrona logo"/></Brand>
                 <Navigation>
-                    <Link to="/wallet/" ><NavButton>Wallet</NavButton></Link>
+                    <NavButton to="/wallet/">Wallet</NavButton>
                     <NavButton href="https://hugin.chat">Hugin</NavButton>
-                    <Link to="/mining/"><NavButton>Mining</NavButton></Link>
-                    <Link to="/blog/"><NavButton>Blog</NavButton></Link>
-                    <Link to="/about/"><NavButton>About</NavButton></Link>
+                    <NavButton to="/mining/" >Mining</NavButton>
+                    <NavButton to="/blog/">Blog</NavButton>
+                    <NavButton to="/about/">About</NavButton>
                 </Navigation>
                 <Hamburger onClick={toggle}><HiOutlineMenu color="#979797" size="1.25em"/></Hamburger>
             </NavWrapper>

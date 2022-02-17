@@ -47,7 +47,7 @@ const SidebarMenu = styled.ul`
   }
 `;
 
-const SidebarLink = styled.a`
+const SidebarLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,11 +78,11 @@ const Sidebar = ({ isOpen, toggle }) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/wallet/"><SidebarLink>Wallet</SidebarLink></Link>
+                    <SidebarLink to="/wallet/">Wallet</SidebarLink>
                     <SidebarLink href="https://hugin.chat">Hugin</SidebarLink>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/mining/"><SidebarLink>Mining</SidebarLink></Link>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/blog/"><SidebarLink>Blog</SidebarLink></Link>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/about/"><SidebarLink>About</SidebarLink></Link>
+                    <SidebarLink to="/mining/">Mining</SidebarLink>
+                    <SidebarLink to="/blog/">Blog</SidebarLink>
+                    <SidebarLink to="/about/">About</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap style={{display: 'flex', gap: '10px'}}>
                 </SideBtnWrap>
