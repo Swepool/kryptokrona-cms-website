@@ -4,10 +4,10 @@ module.exports = {
         titleTemplate: "%s | ",
         description:
             "A Nordic Cryptocurrency to secure and simplify our future economic system. Sending and receiving money should not be expensive or slow. We work with open-source code that allows you to be involved and improve the money of the future.",
-        url: "https://www.kryptokrona.org/",
+        url: "https://www.kryptokrona.org",
         image: "/static/content/ogimage.png",
         twitterUsername: "@kryptokrona",
-        siteUrl: `https://www.kryptokrona.org/`,
+        siteUrl: `https://www.kryptokrona.org`,
     },
     plugins: [
         'gatsby-plugin-emotion',
@@ -22,7 +22,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
-                host: 'https://www.kryptokrona.org/',
+                host: 'https://www.kryptokrona.org',
                 sitemap: 'https://www.kryptokrona.org/sitemap.xml',
                 env: {
                     development: {
