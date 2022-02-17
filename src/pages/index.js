@@ -13,7 +13,7 @@ import Seo from "../components/Seo";
 const index = () => {
   return (
       <Layout>
-          <Seo title="Kryptokrona"/>
+          <Seo title="Home"/>
           <Hero/>
           <Features/>
           <Nodestats/>
