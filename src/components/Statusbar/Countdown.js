@@ -47,36 +47,31 @@ const Countdown = () => {
 
     useEffect( () => {
 
-        //Your node url (port and /getinfo)
-        const url = 'https://swenode.org/api/getinfo'
-
-        // Set goal to reach
-        let goal = 1000000
-
         //Add commas to goal before render
         function numberWithCommas(x) {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
 
-        //***Start***
-//Get height from node
-        function start() {
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    if(data.height > goal) {
-                        goal += 100000
-                    }
-                    render(data.height, goal)
-                    document.getElementById('blocks').textContent = numberWithCommas(goal) + " Blocks"
+
+        //Get supply from paprika and call render()
+        async function start() {
+            await fetch('/.netlify/functions/get-coinpaprika')
+                .then(res => {
+                    if(!res.ok) {
+                        throw Error("Progress bar could not fetch data")
+                    } return res.json()
                 })
+                .then(data => {
+                    render(data.total_supply, 1000000000)
+                })
+                .catch(err => console.log(err))
         }
 
-//Calculate and render
-        function render(height, goal) {
+        //Calculate and render
+        function render(currentSupply, supply) {
 
             //Calc percentage
-            const percentageToGoal = (((height / goal) * 100).toFixed(2)) + "%"
+            const percentageToGoal = (((currentSupply / supply) * 100).toFixed(2)) + "%"
 
             //Render
             document.getElementById('percentage').textContent = percentageToGoal
@@ -92,7 +87,7 @@ const Countdown = () => {
     return(
         <Wrapper>
             <TextWrapper>
-                <Title id="blocks"/>
+                <Title>Total Mined</Title>
                 <Percentage id="percentage"/>
             </TextWrapper>
 
