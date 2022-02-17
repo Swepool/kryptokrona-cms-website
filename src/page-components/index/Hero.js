@@ -87,7 +87,7 @@ const Hero = () => {
                         We work with open source code that allows you to be involved and improve the money of the future.</Text>
                     <ButtonWrapper>
                         <Fillbutton addClass="rgb" text="Hugin" url="https://hugin.chat/"/>
-                        <Link to="/roadmap/" style={{display: "flex", justifyContent: "center", alignContent: "center"}}><Borderbutton text="Roadmap"/></Link>
+                        <Borderbutton text="Roadmap" url="/roadmap/"/>
                     </ButtonWrapper>
                 </TextContent>
             </Container>

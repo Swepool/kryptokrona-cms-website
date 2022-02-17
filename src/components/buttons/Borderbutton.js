@@ -1,8 +1,9 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
 import {color} from "../../theme/colors";
+import {Link} from "gatsby";
 
-const Button = styled.a`
+const Button = styled(Link)`
   border-radius: 5px;
   border: 1px solid ${color.white60};
   background-color: transparent;
@@ -21,7 +22,7 @@ const Button = styled.a`
 
 const Borderbutton = ({text, url}) => {
     return(
-        <Button href={url}>{text}</Button>
+        <Button to={url}>{text}</Button>
     )
 }
 

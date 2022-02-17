@@ -76,7 +76,7 @@ const CTAdesktop = () => {
                     <Text>Using our wallet you can store, send and receive Kryptokrona.
                     <br></br>We currently have desktop wallets for Windows, Linux and Mac!</Text>
                     <ButtonWrapper>
-                        <Link to="/wallet/"><Fillbutton text="Download"/></Link>
+                        <Fillbutton text="Download" url="/wallet/"/>
                     </ButtonWrapper>
                     <SubText>→ Make sure to backup your keys</SubText>
                 </TextWrapper>
