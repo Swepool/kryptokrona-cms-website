@@ -36,7 +36,7 @@ const Card = styled.div`
   border-radius: 8px;
   transition: all 250ms;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  
+
   &:hover {
     border: 1px solid rgba(255, 255, 255, 0.8);
   }
@@ -61,6 +61,15 @@ const CardTitle = styled.h3`
   font-weight: 200;
   color: #fff;
 `
+
+
+const ItalicTitle = styled.h3`
+  font-style: 'italic'
+  margin: 0;
+  font-weight: 200;
+  color: #fff;
+`
+
 const Text = styled.p`
   font-family: 'Roboto Mono', monospace;
   color: rgb(151, 151, 151);
@@ -95,14 +104,16 @@ const AboutCards = () => {
     });
 
     return (
+
+
         <Section>
             <Wrapper>
 
                 <Card>
                     <CardContent>
-                        <CardTitle> Max supply</CardTitle>
+                        <CardTitle>🪙 Max supply</CardTitle>
                         <Text>1,000,000,000 XKR</Text>
-                        <CardTitle> Circulating</CardTitle>
+                        <CardTitle>🔃 Circulating</CardTitle>
                         <Text id="circ-supply">-</Text>
                     </CardContent>
 
@@ -110,36 +121,36 @@ const AboutCards = () => {
 
                 <Card>
                     <CardContent>
-                        <CardTitle>Algorithm</CardTitle>
-                        <Text>We currently running on CryptoNight-Turtle (CN-Pico), which originated from ByteCoin.</Text>
+                        <CardTitle>⛏️ GPU Mining Algorithm</CardTitle>
+                        <Text>We currently running on CryptoNight-Pico, which is a fairer algo than Bitcoin's SHA256 and can even be competently mined on ARM based phones!</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>Blocktime</CardTitle>
+                        <CardTitle>⏲️ Blocktime</CardTitle>
                         <Text>Our network processes new transactions every 90 seconds, in comparison to Bitcoins 10 minute delay.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>Lorem</CardTitle>
-                        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
+                        <CardTitle>🕵 Untraceable</CardTitle>
+                        <Text>XKR transactions make use of ring signatures and stealth addresses to keep prying eyes off of your private transactions!</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>Lorem</CardTitle>
-                        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
+                        <CardTitle>🍄 Fungible</CardTitle>
+                        <Text>Kryptokrona's untracable transactions make coins fungible, meaning that they don't carry any unnecessary baggage.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
-                        <CardTitle>Lorem</CardTitle>
-                        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </Text>
+                        <CardTitle>📈 Drama-free emission curve </CardTitle>
+                        <Text>Our network reduces the amount of new coins minted with every block, making for a drama-free emission.</Text>
                     </CardContent>
                 </Card>
 
