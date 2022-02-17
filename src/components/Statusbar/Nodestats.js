@@ -62,7 +62,7 @@ const Text = styled.p`
 const Nodestats = () => {
 
     useEffect(() => {
-        fetch("/.netlify/functions/get-node")
+        fetch("https://blocksum.org/api/getinfo")
             .then((res) => res.json())
             .then(async (data) => {
                 const Hashrate = data.hashrate;
@@ -76,7 +76,7 @@ const Nodestats = () => {
         async function calcPrice() {
             let xkrPrice
             //get price of xkr on CoinPaprika
-            await fetch("/.netlify/functions/get-coinpaprika")
+            await fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
                 .then(res => {
                     if(!res.ok) {
                         throw Error("Couldn't fetch CoinPaprika")

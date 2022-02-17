@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 `
 
 const TextWrapper = styled.div`
@@ -56,7 +56,7 @@ const Countdown = () => {
 
         //Get supply from paprika and call render()
         async function start() {
-            await fetch('/.netlify/functions/get-coinpaprika')
+            await fetch('https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona')
                 .then(res => {
                     if(!res.ok) {
                         throw Error("Progress bar could not fetch data")
