@@ -24,6 +24,11 @@ const Wrapper = styled.div`
   @media screen and (max-width: 829px) {
     flex-direction: column;
   }
+
+  @media screen and (max-width: 529px) {
+    flex-direction: column;
+    padding: 140px 20px;
+  }
 `
 
 const TextWrapper = styled.div`
