@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import Wallet from '/src/images/wallet.png'
 import Fillbutton from "../../components/buttons/Button";
 import { color } from "../../theme/colors";
+import {Link} from "gatsby";
 
 const Section = styled.div`
   border-top: 1px ${color.divide} solid;
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  padding: 100px 40px;
+  padding: 140px 40px;
   justify-content: space-between;
   gap: 20px;
   
@@ -70,7 +71,7 @@ const CTAdesktop = () => {
                     <Text>Using our wallet you can store, send and receive Kryptokrona.
                     <br></br>We currently have desktop wallets for Windows, Linux and Mac!</Text>
                     <ButtonWrapper>
-                        <Fillbutton text="Download"/>
+                        <Link to="/wallet" style={{display: "flex", justifyContent: "center"}}><Fillbutton text="Download"/></Link>
                     </ButtonWrapper>
                     <SubText>→ Make sure to backup your keys</SubText>
                 </TextWrapper>

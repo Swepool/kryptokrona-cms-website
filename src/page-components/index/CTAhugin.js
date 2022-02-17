@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  padding: 100px 40px;
+  padding: 140px 40px;
   justify-content: space-between;
   gap: 20px;
   

@@ -11,22 +11,21 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
-
-  @media screen and (max-width: 400px) {
-    padding: 0 20px;
-  }
 `
 
 const BlogWrapper = styled.div`
   max-width: 1400px;
   box-sizing: border-box;
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 40px;
   flex-wrap: wrap;
   padding: 0 40px;
+
+  @media screen and (max-width: 400px) {
+    padding: 0 20px;
+  }
 `;
 
 const Card = styled.div`
