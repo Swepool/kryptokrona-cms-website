@@ -21,10 +21,10 @@ const BlogWrapper = styled.div`
   flex-direction: row;
   gap: 40px;
   flex-wrap: wrap;
-  padding: 0 40px;
+  padding: 140px 40px;
 
   @media screen and (max-width: 400px) {
-    padding: 0 20px;
+    padding: 140px 20px;
   }
 `;
 
@@ -87,7 +87,6 @@ class LatestBlog extends React.Component {
 
         return (
             <Section>
-                <h2>Latest post</h2>
                 <BlogWrapper>
                     {posts &&
                         posts.map(({ node: post }) => (
