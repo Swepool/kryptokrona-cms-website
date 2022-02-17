@@ -44,7 +44,7 @@ class GuidesRoll extends React.Component {
             <BlogWrapper>
                 {posts &&
                     posts.map(({ node: post }) => (
-                        <Link style={{width: "100%"}} to={post.frontmatter.slug}>
+                        <Link style={{width: "100%"}} to={`${post.frontmatter.slug}`}>
                         <Card key={post.id}>
 
                                 <Title>{post.frontmatter.title}</Title>

@@ -43,7 +43,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
 
     result.data.blogs.edges.forEach(({node}) => {
         createPage({
-            path: `blog/${node.frontmatter.slug}/`,
+            path: `blog/${node.frontmatter.slug}`,
             component: blogPostTemplate,
             context: {
                 slug: node.frontmatter.slug
@@ -52,7 +52,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
     })
     result.data.guides.edges.forEach(({node}) => {
         createPage({
-            path: `guides/${node.frontmatter.slug}/`,
+            path: `guides/${node.frontmatter.slug}`,
             component: guidePostTemplate,
             context: {
                 slug: node.frontmatter.slug

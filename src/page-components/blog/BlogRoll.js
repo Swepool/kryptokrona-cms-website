@@ -74,7 +74,7 @@ class BlogRoll extends React.Component {
                 {posts &&
                     posts.map(({ node: post }) => (
                         <Card key={post.id}>
-                            <Link to={post.frontmatter.slug}>
+                            <Link to={`${post.frontmatter.slug}`}>
                                 <BlogImage src={post.frontmatter.thumbnail}/>
                                 <Tags>{post.frontmatter.tags}</Tags>
                                 <Title>{post.frontmatter.title}</Title>
