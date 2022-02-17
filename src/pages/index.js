@@ -8,6 +8,7 @@ import Badges from "../page-components/index/Badges";
 import CTAhugin from "../page-components/index/CTAhugin";
 import LatestBlog from "../page-components/index/LatestBlog";
 import Seo from "../components/Seo";
+import Discord from "../components/Discord";
 
 
 const index = () => {
@@ -17,6 +18,7 @@ const index = () => {
           <Hero/>
           <Features/>
           <Nodestats/>
+          <Discord/>
           <CTAhugin/>
           <Badges/>
           <CTAdesktop/>
