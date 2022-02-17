@@ -18,6 +18,7 @@ const TextWrapper = styled.div`
 
 const Title = styled.h3`
   font-weight: 400;
+  font-family: "Roboto Mono";
 `
 const Percentage = styled.h3`
   font-family: 'Roboto Mono', monospace;
@@ -76,6 +77,7 @@ const Countdown = () => {
             //Render
             document.getElementById('percentage').textContent = percentageToGoal
             document.getElementById('progress').style.width = percentageToGoal
+            document.getElementById('mined').textContent = `💰 ${numberWithCommas(currentSupply)} XKR`
             //timeText.textContent = daysLeft
         }
 
@@ -87,7 +89,7 @@ const Countdown = () => {
     return(
         <Wrapper>
             <TextWrapper>
-                <Title>Total Mined</Title>
+                <Title id="mined"></Title>
                 <Percentage id="percentage"/>
             </TextWrapper>
 
