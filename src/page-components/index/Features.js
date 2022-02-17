@@ -8,7 +8,7 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 `
 
 const Wrapper = styled.div`

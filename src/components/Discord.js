@@ -19,7 +19,7 @@ const Section = styled.div`
 
 const Wrapper = styled.a`
   box-sizing: border-box;
-  max-width: 1340px;
+  max-width: 1320px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -29,6 +29,11 @@ const Wrapper = styled.a`
   border: 1px solid ${color.white60};
   justify-content: space-between;
   cursor: pointer;
+  transition: all 250ms;
+
+  &:hover {
+    border: 1px solid ${color.white80};
+  }
 
   @media screen and (max-width: 579px) {
     padding: 10px 20px;

@@ -17,8 +17,8 @@ const index = () => {
           <Seo title="Home"/>
           <Hero/>
           <Features/>
-          <Nodestats/>
           <Discord/>
+          <Nodestats/>
           <CTAhugin/>
           <Badges/>
           <CTAdesktop/>
