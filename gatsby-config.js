@@ -16,6 +16,10 @@ module.exports = {
         'gatsby-plugin-sitemap',
         'gatsby-plugin-mdx',
         {
+            resolve: 'gatsby-plugin-exclude',
+            options: { paths: ['/about/**',  '/mining/**','/wallet/**', '/roadmap/**', '/404/**', '/blog/**/blog' ] },
+        },
+        {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
                 siteUrl: `https://www.kryptokrona.org`,
