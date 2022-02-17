@@ -26,7 +26,7 @@ const Wrapper = styled.a`
   gap: 20px;
   padding: 10px 40px;
   border-radius: 10px;
-  background-color: #7289DA;
+  border: 1px solid ${color.white60};
   justify-content: space-between;
   cursor: pointer;
 
