@@ -17,7 +17,7 @@ module.exports = {
         'gatsby-plugin-mdx',
         {
             resolve: 'gatsby-plugin-exclude',
-            options: { paths: ['/about/**',  '/mining/**','/wallet/**', '/roadmap/**', '/404/**', '/blog/**/blog' ] },
+            options: { paths: ['/about/*',  '/mining/*','/wallet/*', '/roadmap/*', '/404/**', '/blog/**/blog' ] },
         },
         {
             resolve: `gatsby-plugin-canonical-urls`,
