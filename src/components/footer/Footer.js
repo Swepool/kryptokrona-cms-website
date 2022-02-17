@@ -23,7 +23,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 579px) {
     flex-direction: column;
     padding: 60px 20px;
 

@@ -6,7 +6,7 @@ import {color} from "../../theme/colors";
 
 const Section = styled.div`
   border-top: 1px solid ${color.divide};
-  background-color: #1d1d1d;
+  background-color: ${color.background};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@ const BlogWrapper = styled.div`
   flex-wrap: wrap;
   padding: 140px 40px;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 579px) {
     padding: 140px 20px;
   }
 `;
@@ -60,25 +60,20 @@ const BlogImage = styled.img`
 
 const Title = styled.h2`
   font-weight: 400;
-  font-size: 30px;
-  color: #ffffff;
-  margin-top: 0;
+  font-size: 2rem;
+  color: ${color.white}
 `;
 
 const Text = styled.p`
   text-align: justify;
-  color: rgba(255, 255, 255, 0.6);
+  color: ${color.white60};
 
 `;
-const Tags = styled.p`
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.6);
+const Read = styled.p`
+  font-size: 1rem;
+  color: ${color.green};
 `;
 
-const Date = styled.p`
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
-`;
 
 class LatestBlog extends React.Component {
     render() {
@@ -94,11 +89,10 @@ class LatestBlog extends React.Component {
                                 <Link to={`blog/${post.frontmatter.slug}`}>
                                     <>
                                         <BlogImage src={post.frontmatter.thumbnail}/>
-                                        <Tags>{post.frontmatter.tags}</Tags>
                                         <Title>{post.frontmatter.title}</Title>
                                         <Text>{post.frontmatter.summary}</Text>
                                     </>
-                                    <Date>{post.frontmatter.date}</Date>
+                                    <Read>Read more →</Read>
                                 </Link>
                             </Card>
                         ))}

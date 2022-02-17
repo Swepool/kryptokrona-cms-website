@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 579px) {
     padding: 0 20px;
   }
 `

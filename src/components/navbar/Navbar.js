@@ -32,7 +32,7 @@ const NavWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 579px) {
     padding: 20px 20px;
   }
 `

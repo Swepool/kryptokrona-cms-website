@@ -1,18 +1,19 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
+import {color} from "../../theme/colors";
 
 const Button = styled.a`
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: ${color.white60};
   padding: 10px 15px;
   font-weight: 600;
   transition: 250ms;
   text-decoration: none;
-  color: #1d1d1d;
+  color: ${color.background};
   border: 1px solid;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: ${color.white80};
     border-radius: 5px;
     cursor: pointer;
 `
