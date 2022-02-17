@@ -5,6 +5,7 @@ import Fillbutton from "../../components/buttons/Button";
 import { color } from "../../theme/colors";
 
 const Section = styled.div`
+  border-top: 1px ${color.divide} solid;
   display: flex;
   flex-direction: column;
   align-items: center;
