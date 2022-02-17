@@ -17,7 +17,7 @@ module.exports = {
         'gatsby-plugin-mdx',
         {
             resolve: 'gatsby-plugin-exclude',
-            options: { paths: ['/about/blog/',  '/mining/blog/','/wallet/blog/', '/roadmap/blog/', '/404/blog/', '/blog/**/blog/' ] },
+            options: { paths: ['/about/blog/',  '/mining/blog/','/wallet/blog/', '/roadmap/blog/', '/404/blog/', '/blog/**/blog/', '/blog/*/'] },
         },
         {
             resolve: 'gatsby-plugin-robots-txt',
