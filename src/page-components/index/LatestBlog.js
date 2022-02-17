@@ -86,7 +86,7 @@ class LatestBlog extends React.Component {
                     {posts &&
                         posts.map(({ node: post }) => (
                             <Card key={post.id}>
-                                <Link to={`blog/${post.frontmatter.slug}`}>
+                                <Link to={`blog/${post.frontmatter.slug}/`}>
                                     <>
                                         <BlogImage src={post.frontmatter.thumbnail}/>
                                         <Title>{post.frontmatter.title}</Title>
