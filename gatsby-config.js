@@ -17,7 +17,22 @@ module.exports = {
         'gatsby-plugin-mdx',
         {
             resolve: 'gatsby-plugin-exclude',
-            options: { paths: ['/about/*',  '/mining/*','/wallet/*', '/roadmap/*', '/404/**', '/blog/**/blog' ] },
+            options: { paths: ['/about/blog/',  '/mining/blog/','/wallet/blog/', '/roadmap/blog/', '/404/blog/', '/blog/**/blog/' ] },
+        },
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: 'https://www.kryptokrona.org',
+                sitemap: 'https://www.kryptokrona.org/sitemap.xml',
+                env: {
+                    development: {
+                        policy: [{userAgent: '*', disallow: ['/']}]
+                    },
+                    production: {
+                        policy: [{userAgent: '*', allow: '/'}]
+                    }
+                }
+            }
         },
         {
             resolve: `gatsby-plugin-canonical-urls`,

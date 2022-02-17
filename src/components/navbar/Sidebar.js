@@ -78,12 +78,11 @@ const Sidebar = ({ isOpen, toggle }) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/wallet"><SidebarLink>Wallet</SidebarLink></Link>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/wallet/"><SidebarLink>Wallet</SidebarLink></Link>
                     <SidebarLink href="https://hugin.chat">Hugin</SidebarLink>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/mining"><SidebarLink>Mining</SidebarLink></Link>
-                    <SidebarLink href="https://explorer.kryptokrona.se">Explorer</SidebarLink>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/blog"><SidebarLink>Blog</SidebarLink></Link>
-                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/about"><SidebarLink>About</SidebarLink></Link>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/mining/"><SidebarLink>Mining</SidebarLink></Link>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/blog/"><SidebarLink>Blog</SidebarLink></Link>
+                    <Link style={{display: "flex", justifyContent: "center", alignContent: "center"}} to="/about/"><SidebarLink>About</SidebarLink></Link>
                 </SidebarMenu>
                 <SideBtnWrap style={{display: 'flex', gap: '10px'}}>
                 </SideBtnWrap>

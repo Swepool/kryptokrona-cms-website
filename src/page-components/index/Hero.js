@@ -86,8 +86,8 @@ const Hero = () => {
                     <Text>A Nordic Cryptocurrency to secure and simplify our future economic system. Sending and receiving money should not be expensive or slow.
                         We work with open source code that allows you to be involved and improve the money of the future.</Text>
                     <ButtonWrapper>
-                        <Fillbutton addClass="rgb" text="Hugin" url="https://hugin.chat"/>
-                        <Link to="/roadmap" style={{display: "flex", justifyContent: "center", alignContent: "center"}}><Borderbutton text="Roadmap" url="/roadmap"/></Link>
+                        <Fillbutton addClass="rgb" text="Hugin" url="https://hugin.chat/"/>
+                        <Link to="/roadmap" style={{display: "flex", justifyContent: "center", alignContent: "center"}}><Borderbutton text="Roadmap" url="/roadmap/"/></Link>
                     </ButtonWrapper>
                 </TextContent>
             </Container>

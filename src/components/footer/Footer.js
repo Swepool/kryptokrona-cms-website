@@ -115,8 +115,8 @@ const Footer = () => {
                         <NavTitle>Kryptokrona</NavTitle>
                         <a href="https://explorer.kryptokrona.se"><ListItem>Explorer</ListItem></a>
                         <a href="https://kryptokrona.se/Proposal_for_a_New_Nordic_Digital_Currency.pdf"><ListItem>Litepaper</ListItem></a>
-                        <a href="/blog"><ListItem>Blog</ListItem></a>
-                        <a href="/guides"><ListItem>Guides</ListItem></a>
+                        <a href="/blog/"><ListItem>Blog</ListItem></a>
+                        <a href="/guides/"><ListItem>Guides</ListItem></a>
                     </NavList>
                     <NavList>
                         <NavTitle>Hugin</NavTitle>
