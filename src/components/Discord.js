@@ -64,7 +64,7 @@ const Discord = () => {
             const response = await fetch('https://discord.com/api/guilds/562673808582901793/widget.json')
             const data = await response.json()
             console.log(data.presence_count)
-            document.getElementById('online').textContent = `🟢 ${data.presence_count} online`
+            document.getElementById('online').innerHTML += ` ${data.presence_count} online`
         }
         getDiscord()
     })
@@ -74,7 +74,7 @@ const Discord = () => {
             <Wrapper href="https://discord.gg/kryptokrona">
                 <>
                 <img src={DiscordLogo} height="40px"/>
-                <Title id="online">-</Title>
+                <Title id="online"><span className="rgbText" style={{fontSize: "1.2rem"}}>•</span></Title>
                 </>
                 <RoundButton href='https://discord.gg/kryptokrona'>⮕</RoundButton>
             </Wrapper>
