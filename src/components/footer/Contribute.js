@@ -96,8 +96,9 @@ const CardWrapper = styled.div`
 `
 
 const Card = styled.div`
+  box-sizing: border-box;
   display: flex;
-  height: 150px;
+  height: 200px;
   flex-direction: column;
   justify-content: space-between;
   border: 2px solid ${color.white60};
