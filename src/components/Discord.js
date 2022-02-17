@@ -26,11 +26,12 @@ const Wrapper = styled.a`
   gap: 20px;
   padding: 10px 40px;
   border-radius: 10px;
-  border: 1px solid ${color.white60};
+  border: 1px solid #5f86f2;
+  background-color: #5f86f2;
   justify-content: space-between;
   cursor: pointer;
   transition: all 250ms;
-
+  
   &:hover {
     border: 1px solid ${color.white80};
   }
@@ -50,7 +51,7 @@ const RoundButton = styled.a`
   justify-content: center;
   align-items: center;
   transition: 250ms;
-  color: ${color.white};
+  color: ${color.white80};
 
   &:hover {
     background-color: ${color.white};
@@ -79,7 +80,7 @@ const Discord = () => {
             <Wrapper href="https://discord.gg/kryptokrona">
                 <>
                 <img src={DiscordLogo} height="40px"/>
-                <Title id="online"><span className="rgbText" style={{fontSize: "1.2rem"}}>•</span></Title>
+                <Title id="online"><span className="blink_me" style={{fontSize: "1.1rem", color: "#5ff281"}}>●</span></Title>
                 </>
                 <RoundButton href='https://discord.gg/kryptokrona'>⮕</RoundButton>
             </Wrapper>
