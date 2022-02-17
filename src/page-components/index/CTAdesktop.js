@@ -80,7 +80,7 @@ const CTAdesktop = () => {
                     </ButtonWrapper>
                     <SubText>→ Make sure to backup your keys</SubText>
                 </TextWrapper>
-                <WalletImage src={Wallet}/>
+                <WalletImage src={Wallet} alt="Kryptokrona Wallet"/>
             </Wrapper>
         </Section>
     )

@@ -88,7 +88,7 @@ class LatestBlog extends React.Component {
                             <Card key={post.id}>
                                 <Link to={`blog/${post.frontmatter.slug}/`}>
                                     <>
-                                        <BlogImage src={post.frontmatter.thumbnail}/>
+                                        <BlogImage src={post.frontmatter.thumbnail} alt={post.frontmatter.alt}/>
                                         <Title>{post.frontmatter.title}</Title>
                                         <Text>{post.frontmatter.summary}</Text>
                                     </>
@@ -130,6 +130,7 @@ query LatestBlogQuery {
           thumbnail
           tags
           summary
+          alt
         }
       }
     }

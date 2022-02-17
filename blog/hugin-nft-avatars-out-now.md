@@ -4,6 +4,7 @@ layout: blog
 title: Hugin NFT avatars out now!
 date: 2021-12-22T14:08:02.402Z
 thumbnail: /content/mud.png
+alt: kryptokrona
 summary: >-
   NFT avatars are coming to Hugin!
 

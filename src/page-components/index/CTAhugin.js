@@ -78,7 +78,7 @@ const CTAhugin = () => {
                         <Fillbutton text="Download" url="https://hugin.chat/"/>
                     </ButtonWrapper>
                 </TextWrapper>
-                <HuginImage src={Hugin}/>
+                <HuginImage src={Hugin} alt="Hugin Messenger"/>
             </Wrapper>
         </Section>
     )

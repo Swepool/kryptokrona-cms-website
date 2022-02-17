@@ -215,7 +215,7 @@ const Contribute =() => {
                         </CardTextWrapper>
                         <UserWrapper>
                             <div style={{display: "flex", gap: "10px", alignItems: "end"}}>
-                                <Avatar id="avatar"/>
+                                <Avatar id="avatar" alt="Github Avatar"/>
                                 <UserName id="username"/>
                             </div>
                             <RoundButton id="url" href='/#'>⮕</RoundButton>

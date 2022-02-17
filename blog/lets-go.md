@@ -4,6 +4,7 @@ layout: blog
 title: Hugin - New steps
 date: 2022-01-15T11:03:34.304Z
 thumbnail: /content/image.png
+alt: kryptokrona
 summary: Our flagship, Hugin Messenger is being developed to something
   completely new. The ability to send encrypted messages with ease without
   middle hands is big in itself, but what Hugin Messenger (soon) will be capable

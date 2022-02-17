@@ -4,6 +4,7 @@ layout: blog
 title: Testar
 date: 2022-01-13T10:11:52.119Z
 thumbnail: /content/ingveshead.png
+alt: kryptokrona
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
