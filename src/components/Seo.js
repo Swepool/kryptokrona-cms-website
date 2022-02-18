@@ -40,7 +40,7 @@ const Seo = ({ title, description, image, article }) => {
                 <meta name="twitter:description" content={seo.description} />
             )}
             {seo.image && <meta name="twitter:image" content={seo.image} />}
-            <script defer data-domain="kryptokrona.org" src="https://plausible.io/js/plausible.js"/>
+            <script defer data-domain="kryptokrona.org" src="https://plausible.io/js/plausible.outbound-links.js"/>
             <meta name="robots" content="index, follow"/>
             <meta name="theme-color" content="#1d1d1d"/>
             {seo.url && <link rel="alternate" hreflang="x-default" href={seo.url}/>}
