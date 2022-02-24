@@ -15,6 +15,9 @@ module.exports = {
         `gatsby-transformer-remark`,
         'gatsby-plugin-sitemap',
         'gatsby-plugin-mdx',
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         {
             resolve: 'gatsby-plugin-exclude',
             options: { paths: ['/about/blog/',  '/mining/blog/','/wallet/blog/', '/roadmap/blog/', '/404/blog/', '/blog/**/blog/', '/blog/*/'] },
