@@ -62,21 +62,36 @@ const Text = styled.p`
 const Nodestats = () => {
 
     useEffect(() => {
+
         fetch("https://blocksum.org/api/getinfo")
-            .then((res) => res.json())
+            .then((res) =>  {
+                if (!res.ok) {
+                    throw Error('Could not fetch Node')
+                } return res.json
+            })
             .then(async (data) => {
                 const Hashrate = data.hashrate;
                 const Height = data.height;
                 const Nodes = data.grey_peerlist_size;
-                document.getElementById("hashrate").innerHTML =
-                    (Hashrate / 1000000).toFixed(2) + " MH/s";
+                document.getElementById("hashrate").innerHTML = (Hashrate / 1000000).toFixed(2) + " MH/s";
                 document.getElementById("height").innerHTML = Height;
                 document.getElementById("nodes").innerHTML = Nodes;
-            });
-        async function calcPrice() {
+            }) .catch(err => {
+                fetch('https://swenode.org/api/getinfo')
+                    .then(res => res.json())
+                    .then(data => {
+                        const Hashrate = data.hashrate;
+                        const Height = data.height;
+                        const Nodes = data.grey_peerlist_size;
+                        document.getElementById("hashrate").innerHTML = (Hashrate / 1000000).toFixed(2) + " MH/s";
+                        document.getElementById("height").innerHTML = Height;
+                        document.getElementById("nodes").innerHTML = Nodes;
+                    })
+        })
+       function calcPrice() {
             let xkrPrice
             //get price of xkr on CoinPaprika
-            await fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
+            fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
                 .then(res => {
                     if(!res.ok) {
                         throw Error("Couldn't fetch CoinPaprika")
@@ -84,10 +99,9 @@ const Nodestats = () => {
                 })
                 .then(data => {
                     xkrPrice = (data.quotes.USD.price).toFixed(5)
-
+                    document.getElementById("price").innerHTML = xkrPrice + " USD"
                 })
                 .catch(err => console.log(err))
-            document.getElementById("price").innerHTML = xkrPrice + " USD"
         }
         calcPrice()
     });
