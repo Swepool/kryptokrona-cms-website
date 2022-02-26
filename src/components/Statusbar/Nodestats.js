@@ -64,12 +64,13 @@ const Nodestats = () => {
     useEffect(() => {
 
         fetch("https://blocksum.org/api/getinfo")
-            .then((res) =>  {
-                if (!res.ok) {
-                    throw Error('Could not fetch Node')
-                } return res.json
+            .then(res => {
+                console.log(res)
+                if(!res.ok) {
+                    throw Error('could fetch blocksum')
+                } else return res.json()
             })
-            .then(async (data) => {
+            .then(data => {
                 const Hashrate = data.hashrate;
                 const Height = data.height;
                 const Nodes = data.grey_peerlist_size;
@@ -77,6 +78,7 @@ const Nodestats = () => {
                 document.getElementById("height").innerHTML = Height;
                 document.getElementById("nodes").innerHTML = Nodes;
             }) .catch(err => {
+                console.log(err)
                 fetch('https://swenode.org/api/getinfo')
                     .then(res => res.json())
                     .then(data => {
