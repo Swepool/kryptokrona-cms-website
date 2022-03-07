@@ -34,6 +34,9 @@ body {
     margin: 0;
     transition: 250ms ease-in-out all;
     cursor: pointer;
+    background-color: #ff2f40;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .enabled {
@@ -49,6 +52,7 @@ body {
     padding: 10px 20px;
     border-radius: 5px 0 0 5px;
     border: 1px solid rgba(255, 255, 255, 0.6);
+    border-right: none;
     background-color: transparent;
     color: #fff;
     margin-bottom: 40px;
