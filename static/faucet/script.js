@@ -1,6 +1,13 @@
 let input = document.getElementById('address')
 let submit = document.getElementById('btn')
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+let address = urlParams.get('address');
+if (address) {
+  input.value = address;
+}
 function enableBtn() {
     submit.disabled = false;
     submit.classList.add('enabled')
