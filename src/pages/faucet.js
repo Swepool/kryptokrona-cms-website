@@ -78,9 +78,8 @@ const Button = styled.button`
     outline: none;
   }
 `
-const Faucet= (props) => {
 
-    console.log("running")
+const Faucet= (props) => {
 
     const search = props.location.search;
     const params = new URLSearchParams(search);
@@ -106,8 +105,6 @@ const Faucet= (props) => {
 
  function submitForm(e) {
         e.preventDefault()
-
-        setCaptcha(document.getElementById('g-recaptcha-response').value)
 
         const value = {
             "address": inputValue,
@@ -168,9 +165,12 @@ const Faucet= (props) => {
                         <Recaptcha
                             sitekey="6LeuuboeAAAAALFj2PEADpIc2jZwLYQOa3R3iiCR"
                             theme="dark"
-                            render="explicit" //
-                            onloadCallback={() => console.log('rendered')} // required
-                            verifyCallback={() => setDisableSubmit(false)}
+                            render="explicit"
+                            onloadCallback={() => console.log('Captcha rendered')}
+                            verifyCallback={() => {
+                                setCaptcha(document.getElementById('g-recaptcha-response').value)
+                                setDisableSubmit(false)
+                            }}
                         />
                         <p id="balance"></p>
                         <p id="status">{status}</p>
