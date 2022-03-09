@@ -90,22 +90,6 @@ const Nodestats = () => {
                         document.getElementById("nodes").innerHTML = Nodes;
                     })
         })
-       function calcPrice() {
-            let xkrPrice
-            //get price of xkr on CoinPaprika
-            fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
-                .then(res => {
-                    if(!res.ok) {
-                        throw Error("Couldn't fetch CoinPaprika")
-                    } return res.json()
-                })
-                .then(data => {
-                    xkrPrice = (data.quotes.USD.price).toFixed(5)
-                    document.getElementById("price").innerHTML = xkrPrice + " USD"
-                })
-                .catch(err => console.log(err))
-        }
-        calcPrice()
     });
 
     return(
@@ -124,10 +108,6 @@ const Nodestats = () => {
                     <Item>
                         <Title>Nodes</Title>
                         <Text id="nodes"></Text>
-                    </Item>
-                    <Item>
-                        <Title>Price</Title>
-                        <Text id="price"></Text>
                     </Item>
                 </ItemWrapper>
             </Wrapper>
