@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {color} from "../../theme/colors";
 
 const Wrapper = styled.div`
@@ -26,13 +26,13 @@ const Percentage = styled.h3`
   font-weight: 200;
 `
 const Goal = styled.div`
-    display: flex;
-    align-items: center;
-    height: 10px;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 30px;
-    width: 100%;
-    padding: 2px;
+  display: flex;
+  align-items: center;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  width: 100%;
+  padding: 2px;
 `
 const Progress = styled.div`
   animation: load 3s normal forwards;
@@ -46,53 +46,35 @@ const Progress = styled.div`
 
 const Countdown = () => {
 
-    useEffect( () => {
-
-        //Add commas to goal before render
-        function numberWithCommas(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
+    const [supply, setSupply] = useState('💰 Loading...')
+    const [percentage, setPercentage] = useState('Loading...')
+    const maxSupply = 1000000000
 
 
-        //Get supply from paprika and call render()
-        async function start() {
-            await fetch('https://blocksum.org/api/v1/supply')
-                .then(res => {
-                    if(!res.ok) {
-                        throw Error("Progress bar could not fetch data")
-                    } return res.json()
-                })
-                .then(data => {
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
+    fetch('https://blocksum.org/api/v1/supply')
+        .then(res => {
+            if (!res.ok) {
+                throw Error("Progress bar could not fetch data")
+            }
+            return res.json()
+        })
+        .then(data => {
+            setPercentage(`${((data.supply.current / maxSupply) * 100).toFixed(2)}%`)
+            console.log(percentage)
+            setSupply(`💰 ${numberWithCommas(data.supply.current)} XKR`)
+            document.getElementById('progress').style.width = percentage
+        })
+        .catch(err => console.log(err))
 
-                    render(data.supply.current, 1000000000)
-                })
-                .catch(err => console.log(err))
-        }
-
-        //Calculate and render
-        function render(currentSupply, supply) {
-
-            //Calc percentage
-            const percentageToGoal = (((currentSupply / supply) * 100).toFixed(2)) + "%"
-
-            //Render
-            document.getElementById('percentage').textContent = percentageToGoal
-            document.getElementById('progress').style.width = percentageToGoal
-            document.getElementById('mined').textContent = `💰 ${numberWithCommas(currentSupply)} XKR`
-            //timeText.textContent = daysLeft
-        }
-
-//Start
-        start()
-
-    })
-
-    return(
+    return (
         <Wrapper>
             <TextWrapper>
-                <Title id="mined"></Title>
-                <Percentage id="percentage"/>
+                <Title id="mined">{supply}</Title>
+                <Percentage id="percentage">{percentage}</Percentage>
             </TextWrapper>
 
             <Goal>
