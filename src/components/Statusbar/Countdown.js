@@ -44,7 +44,7 @@ const Progress = styled.div`
   transition: all 3s;
 `
 
-const Countdown = () => {
+const Countdown = (props) => {
 
     const [supply, setSupply] = useState('💰 Loading...')
     const [percentage, setPercentage] = useState('Loading...')
@@ -55,19 +55,21 @@ const Countdown = () => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    fetch('https://blocksum.org/api/v1/supply')
-        .then(res => {
-            if (!res.ok) {
-                throw Error("Progress bar could not fetch data")
-            }
-            return res.json()
-        })
-        .then(data => {
-            setPercentage(`${((data.supply.current / maxSupply) * 100).toFixed(2)}%`)
-            setSupply(`💰 ${numberWithCommas(data.supply.current)} XKR`)
-            document.getElementById('progress').style.width = percentage
-        })
-        .catch(err => console.log(err))
+    useEffect(() => {
+        fetch('https://blocksum.org/api/v1/supply')
+            .then(res => {
+                if (!res.ok) {
+                    throw Error("Progress bar could not fetch data")
+                }
+                return res.json()
+            })
+            .then(data => {
+                setPercentage(`${((data.supply.current / maxSupply) * 100).toFixed(2)}%`)
+                setSupply(`💰 ${numberWithCommas(data.supply.current)} XKR`)
+                document.getElementById('progress').style.width = percentage
+            })
+            .catch(err => console.log(err))
+    })
 
     return (
         <Wrapper>

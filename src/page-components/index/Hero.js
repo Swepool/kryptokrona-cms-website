@@ -1,10 +1,8 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import ArtImg from '../../images/art.webp';
 import Fillbutton from "../../components/buttons/Button";
 import Borderbutton from "../../components/buttons/Borderbutton";
 import {color} from "../../theme/colors";
-import {Link} from "gatsby";
 import {StaticImage} from "gatsby-plugin-image";
 
 
@@ -64,13 +62,6 @@ const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
-`
-
-const Art = styled.img`
-  max-width: 1360px;
-  width: 100%;
-  margin-bottom: 2rem;
-  filter: brightness(1.3);
 `
 
 const Title = styled.h1`

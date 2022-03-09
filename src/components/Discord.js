@@ -68,26 +68,29 @@ const Discord = () => {
 
     const [membersOnline, setMembersOnline] = useState('Loading...')
 
+    useEffect(() => {
         async function getDiscord() {
             const response = await fetch('https://discord.com/api/guilds/562673808582901793/widget.json')
             const data = await response.json()
-            setMembersOnline(` ${data.presence_count} online` )
+            setMembersOnline(` ${data.presence_count} online`)
         }
-        getDiscord()
 
-    return(
+        getDiscord()
+    })
+
+    return (
         <Section>
             <Wrapper href="https://discord.gg/kryptokrona">
                 <>
-                <img src={DiscordLogo} height="40px" alt="Discord logo"/>
-                <Title>
+                    <img src={DiscordLogo} height="40px" alt="Discord logo"/>
+                    <Title>
                     <span
                         className="blink_me"
                         style={{fontSize: "1.1rem", color: "#5ff281"}}>
                         {membersOnline === "Loading..." ? "" : "●"}
                     </span>
-                    {membersOnline}
-                </Title>
+                        {membersOnline}
+                    </Title>
                 </>
                 <RoundButton href='https://discord.gg/kryptokrona'>⮕</RoundButton>
             </Wrapper>

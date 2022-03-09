@@ -2,7 +2,8 @@ import * as React from 'react'
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import styled from "@emotion/styled";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+
 const Recaptcha = require('react-recaptcha');
 
 const Section = styled.div`
@@ -34,7 +35,7 @@ const Container = styled.div`
   @media screen and (max-width: 579px) {
     padding: 0 20px;
   }
-  
+
 `
 
 const Wrapper = styled.div`
@@ -52,7 +53,7 @@ const Input = styled.input`
   background-color: transparent;
   color: #fff;
   margin-bottom: 40px;
-  
+
   &:focus {
     outline: none;
   }
@@ -69,7 +70,7 @@ const Button = styled.button`
   background-color: rgba(255, 255, 255, 0.32);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(0, 0, 0, 0.5);
-  
+
   &:hover {
     background-color: #5ff281;
   }
@@ -79,7 +80,7 @@ const Button = styled.button`
   }
 `
 
-const Faucet= (props) => {
+const Faucet = (props) => {
 
     const search = props.location.search;
     const params = new URLSearchParams(search);
@@ -90,20 +91,22 @@ const Faucet= (props) => {
     const [status, setStatus] = useState('')
     const [captcha, setCaptcha] = useState('')
     const [inputValue, setInputValue] = useState(inComingUrl)
-    const [disableSubmit,setDisableSubmit] = useState(true);
+    const [disableSubmit, setDisableSubmit] = useState(true);
 
 
     function handleChange(event) {
         setInputValue(event.target.value)
     }
 
-    fetch('https://blocksum.org/faucet/balance')
-        .then(res => res.json())
-        .then(data => {
-             data.balance ? document.getElementById('balance').textContent = "Funds available 🥳" : document.getElementById('balance').textContent = 'No funds available 😭'
-        })
+    useEffect(() => {
+        fetch('https://blocksum.org/faucet/balance')
+            .then(res => res.json())
+            .then(data => {
+                data.balance ? document.getElementById('balance').textContent = "Funds available 🥳" : document.getElementById('balance').textContent = 'No funds available 😭'
+            })
+    })
 
- function submitForm(e) {
+    function submitForm(e) {
         e.preventDefault()
 
         const value = {
@@ -112,7 +115,7 @@ const Faucet= (props) => {
         }
         const json = JSON.stringify(value)
 
-         fetch("https://blocksum.org/faucet/send", {
+        fetch("https://blocksum.org/faucet/send", {
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json"
@@ -124,7 +127,7 @@ const Faucet= (props) => {
 
                 console.log(data)
 
-                if(data.msg ==="recent") {
+                if (data.msg === "recent") {
                     setStatus('Someone recently claimed, please wait a few seconds 🚨')
                     document.getElementById('status').style.color = '#ff2f40'
                 } else if (data.msg === "claimed") {
@@ -133,7 +136,7 @@ const Faucet= (props) => {
                 } else if (data.msg === "sent") {
                     setStatus(`Sent ✅ ${data.tx}`)
                     document.getElementById('status').style.color = '#2fff6a'
-                } else if(data.msg === "error") {
+                } else if (data.msg === "error") {
                     setStatus(data.errorMsg)
                     document.getElementById('status').style.color = '#ff2f40'
                 }
@@ -141,7 +144,7 @@ const Faucet= (props) => {
             })
     }
 
-    return(
+    return (
         <Layout>
             <Seo title="Faucet"/>
             <Section>
@@ -149,13 +152,13 @@ const Faucet= (props) => {
                     <Wrapper>
                         <div className="tear rgb"></div>
                         <h1>Faucet</h1>
-                        <form >
+                        <form>
                             <Input
                                 id={'input'}
                                 placeholder={'Enter address'}
                                 value={inputValue}
                                 onChange={handleChange}
-                                />
+                            />
                             <Button
                                 type={"submit"}
                                 onClick={submitForm}

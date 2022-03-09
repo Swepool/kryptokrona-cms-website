@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 const Section = styled.div`
@@ -72,23 +72,26 @@ const Text = styled.p`
 
 const AboutCards = () => {
     //State
-    const [supply, setSupply] = useState('')
-        //add commas to numbers
-            function numberWithCommas(x) {
-                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
+    const [supply, setSupply] = useState('Loading..')
 
-            //Get supply from CoinPaprika
-            fetch("https://blocksum.org/api/v1/supply")
-                .then(res => {
-                    if(!res.ok) {
-                        throw Error("Couldn't fetch CoinPaprika")
-                    } return res.json()
-                })
-                .then(data => {
-                    setSupply(`${data.supply.current} XKR`)
-                })
-                .catch(err => console.log(err))
+    //add commas to numbers
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    useEffect(() => {
+        fetch("https://blocksum.org/api/v1/supply")
+            .then(res => {
+                if (!res.ok) {
+                    throw Error("Couldn't fetch CoinPaprika")
+                }
+                return res.json()
+            })
+            .then(data => {
+                setSupply(`${data.supply.current} XKR`)
+            })
+            .catch(err => console.log(err))
+    })
 
     return (
         <Section>
@@ -106,35 +109,40 @@ const AboutCards = () => {
                 <Card>
                     <CardContent>
                         <CardTitle>⛏️ GPU Mining Algorithm</CardTitle>
-                        <Text>We currently running on CryptoNight-Pico, which is a fairer algo than Bitcoin's SHA256 and can even be competently mined on ARM based phones!</Text>
+                        <Text>We currently running on CryptoNight-Pico, which is a fairer algo than Bitcoin's SHA256 and
+                            can even be competently mined on ARM based phones!</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
                         <CardTitle>⏲️ Blocktime</CardTitle>
-                        <Text>Our network processes new transactions every 90 seconds, in comparison to Bitcoins 10 minute delay.</Text>
+                        <Text>Our network processes new transactions every 90 seconds, in comparison to Bitcoins 10
+                            minute delay.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
                         <CardTitle>🕵 Untraceable</CardTitle>
-                        <Text>XKR transactions make use of ring signatures and stealth addresses to keep prying eyes off of your private transactions!</Text>
+                        <Text>XKR transactions make use of ring signatures and stealth addresses to keep prying eyes off
+                            of your private transactions!</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
                         <CardTitle>🍄 Fungible</CardTitle>
-                        <Text>Kryptokrona's untracable transactions make coins fungible, meaning that they don't carry any unnecessary baggage.</Text>
+                        <Text>Kryptokrona's untracable transactions make coins fungible, meaning that they don't carry
+                            any unnecessary baggage.</Text>
                     </CardContent>
                 </Card>
 
                 <Card>
                     <CardContent>
                         <CardTitle>📈 Drama-free emission curve </CardTitle>
-                        <Text>Our network reduces the amount of new coins minted with every block, making for a drama-free emission.</Text>
+                        <Text>Our network reduces the amount of new coins minted with every block, making for a
+                            drama-free emission.</Text>
                     </CardContent>
                 </Card>
 

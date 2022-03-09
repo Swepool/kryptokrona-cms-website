@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import Wallet from '/src/images/wallet.png'
 import Fillbutton from "../../components/buttons/Button";
 import { color } from "../../theme/colors";
-import {Link} from "gatsby";
 
 const Section = styled.div`
   border-top: 1px ${color.divide} solid;

@@ -55,10 +55,6 @@ const Text = styled.p`
   margin: 0;
 `
 
-const SubText = styled.p`
-  font-size: 0.75rem;
-  color: ${color.green};
-`
 
 const HuginImage = styled.img`
   max-width: 550px;
