@@ -65,7 +65,7 @@ const Title = styled.p`
 `
 
 const Discord = () => {
-    useEffect(() =>{
+
         async function getDiscord() {
             const response = await fetch('https://discord.com/api/guilds/562673808582901793/widget.json')
             const data = await response.json()
@@ -73,7 +73,6 @@ const Discord = () => {
             document.getElementById('online').innerHTML += ` ${data.presence_count} online`
         }
         getDiscord()
-    })
 
     return(
         <Section>
