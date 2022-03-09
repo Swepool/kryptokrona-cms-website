@@ -56,14 +56,16 @@ const Countdown = () => {
 
         //Get supply from paprika and call render()
         async function start() {
-            await fetch('https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona')
+            await fetch('https://blocksum.org/api/v1/supply')
                 .then(res => {
                     if(!res.ok) {
                         throw Error("Progress bar could not fetch data")
                     } return res.json()
                 })
                 .then(data => {
-                    render(data.total_supply, 1000000000)
+
+
+                    render(data.supply.current, 1000000000)
                 })
                 .catch(err => console.log(err))
         }
