@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import styled from "@emotion/styled";
 import DiscordLogo from '/src/images/discord.png'
 import {color} from "../theme/colors";
@@ -60,17 +60,18 @@ const RoundButton = styled.a`
 `
 
 const Title = styled.p`
-    font-family: "Roboto Mono";
+  font-family: "Roboto Mono";
   color: white;
 `
 
 const Discord = () => {
 
+    const [membersOnline, setMembersOnline] = useState(false)
+
         async function getDiscord() {
             const response = await fetch('https://discord.com/api/guilds/562673808582901793/widget.json')
             const data = await response.json()
-            console.log(data.presence_count)
-            document.getElementById('online').innerHTML += ` ${data.presence_count} online`
+            setMembersOnline(` ${data.presence_count} online` )
         }
         getDiscord()
 
@@ -79,7 +80,7 @@ const Discord = () => {
             <Wrapper href="https://discord.gg/kryptokrona">
                 <>
                 <img src={DiscordLogo} height="40px" alt="Discord logo"/>
-                <Title id="online"><span className="blink_me" style={{fontSize: "1.1rem", color: "#5ff281"}}>●</span></Title>
+                <Title>{membersOnline}<span className="blink_me" style={{fontSize: "1.1rem", color: "#5ff281"}}>{membersOnline ? " ●" : ""}</span></Title>
                 </>
                 <RoundButton href='https://discord.gg/kryptokrona'>⮕</RoundButton>
             </Wrapper>
