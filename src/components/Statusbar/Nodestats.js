@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Countdown from "./Countdown";
 import {color} from "../../theme/colors";
 
@@ -61,7 +61,9 @@ const Text = styled.p`
 
 const Nodestats = () => {
 
-    useEffect(() => {
+    const [nodes, setNodes] = useState('Loading...')
+    const [height, setHeight] = useState('Loading...')
+    const [hashrate, setHashrate] = useState('Loading...')
 
         fetch("https://blocksum.org/api/getinfo")
             .then(res => {
@@ -71,26 +73,19 @@ const Nodestats = () => {
                 } else return res.json()
             })
             .then(data => {
-                const Hashrate = data.hashrate;
-                const Height = data.height;
-                const Nodes = data.grey_peerlist_size;
-                document.getElementById("hashrate").innerHTML = (Hashrate / 1000000).toFixed(2) + " MH/s";
-                document.getElementById("height").innerHTML = Height;
-                document.getElementById("nodes").innerHTML = Nodes;
+                setHashrate(`${(data.hashrate / 1000000).toFixed(2)} MH/s`)
+                setHeight(data.height)
+                setNodes(data.grey_peerlist_size)
             }) .catch(err => {
                 console.log(err)
                 fetch('https://swenode.org/api/getinfo')
                     .then(res => res.json())
                     .then(data => {
-                        const Hashrate = data.hashrate;
-                        const Height = data.height;
-                        const Nodes = data.grey_peerlist_size;
-                        document.getElementById("hashrate").innerHTML = (Hashrate / 1000000).toFixed(2) + " MH/s";
-                        document.getElementById("height").innerHTML = Height;
-                        document.getElementById("nodes").innerHTML = Nodes;
+                        setHashrate(`${((data.hashrate / 1000000).toFixed2)} MH/s`)
+                        setHeight(data.height)
+                        setNodes(data.grey_peerlist_size)
                     })
         })
-    });
 
     return(
         <Section>
@@ -99,15 +94,15 @@ const Nodestats = () => {
                 <ItemWrapper>
                     <Item>
                         <Title>Height</Title>
-                        <Text id="height"></Text>
+                        <Text>{height}</Text>
                     </Item>
                     <Item>
                         <Title>Hashrate</Title>
-                        <Text id="hashrate"></Text>
+                        <Text>{hashrate}</Text>
                     </Item>
                     <Item>
                         <Title>Nodes</Title>
-                        <Text id="nodes"></Text>
+                        <Text>{nodes}</Text>
                     </Item>
                 </ItemWrapper>
             </Wrapper>
