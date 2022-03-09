@@ -78,13 +78,13 @@ const Button = styled.button`
     outline: none;
   }
 `
-const Faucet= () => {
+const Faucet= (props) => {
 
     console.log("running")
 
-    let search = window.location.search;
-    let params = new URLSearchParams(search);
-    let inComingUrl = params.get('address')
+    const search = props.location.search;
+    const params = new URLSearchParams(search);
+    const inComingUrl = params.get('address');
 
 
     //handle state and change
@@ -92,7 +92,7 @@ const Faucet= () => {
     const [captcha, setCaptcha] = useState('')
     const [inputValue, setInputValue] = useState(inComingUrl)
     const [disableSubmit,setDisableSubmit] = useState(true);
-    
+
 
     function handleChange(event) {
         setInputValue(event.target.value)
