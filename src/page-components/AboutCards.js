@@ -88,14 +88,14 @@ const AboutCards = () => {
             }
 
             //Get supply from CoinPaprika
-            await fetch("https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona")
+            await fetch("https://blocksum.org/api/v1/supply")
                 .then(res => {
                     if(!res.ok) {
                         throw Error("Couldn't fetch CoinPaprika")
                     } return res.json()
                 })
                 .then(data => {
-                    xkrSupply = (data.total_supply)
+                    xkrSupply = (data.supply.current)
                 })
                 .catch(err => console.log(err))
             document.getElementById("circ-supply").textContent = `${numberWithCommas(xkrSupply)} XKR`
