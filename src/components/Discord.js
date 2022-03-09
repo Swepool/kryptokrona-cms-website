@@ -80,7 +80,7 @@ const Discord = () => {
             <Wrapper href="https://discord.gg/kryptokrona">
                 <>
                 <img src={DiscordLogo} height="40px" alt="Discord logo"/>
-                <Title>{membersOnline}<span className="blink_me" style={{fontSize: "1.1rem", color: "#5ff281"}}>{membersOnline ? " ●" : ""}</span></Title>
+                <Title><span className="blink_me" style={{fontSize: "1.1rem", color: "#5ff281"}}>{membersOnline ? "● " : ""}</span>{membersOnline}</Title>
                 </>
                 <RoundButton href='https://discord.gg/kryptokrona'>⮕</RoundButton>
             </Wrapper>
