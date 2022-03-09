@@ -64,7 +64,6 @@ const Countdown = () => {
         })
         .then(data => {
             setPercentage(`${((data.supply.current / maxSupply) * 100).toFixed(2)}%`)
-            console.log(percentage)
             setSupply(`💰 ${numberWithCommas(data.supply.current)} XKR`)
             document.getElementById('progress').style.width = percentage
         })

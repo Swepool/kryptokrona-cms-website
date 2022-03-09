@@ -67,7 +67,6 @@ const Nodestats = () => {
 
         fetch("https://blocksum.org/api/getinfo")
             .then(res => {
-                console.log(res)
                 if(!res.ok) {
                     throw Error('could fetch blocksum')
                 } else return res.json()
