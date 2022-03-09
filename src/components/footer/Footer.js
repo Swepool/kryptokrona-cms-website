@@ -123,6 +123,7 @@ const Footer = () => {
                         <a href="https://hugin.chat"><ListItem>Website</ListItem></a>
                         <a href="https://kryptokrona.se/Hugin_Whitepaper.pdf"><ListItem>Whitepaper</ListItem></a>
                         <a href="https://github.com/kryptokrona"><ListItem>Github</ListItem></a>
+                        <a href="/faucet/"><ListItem>Faucet</ListItem></a>
                     </NavList>
                 </ListWrapper>
                 <ContentWrapper>
