@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import {useEffect} from "react";
+import {useState} from "react";
+
 
 const Section = styled.div`
   background-color: #1d1d1d;
@@ -63,13 +64,6 @@ const CardTitle = styled.h3`
 `
 
 
-const ItalicTitle = styled.h3`
-  font-style: 'italic'
-  margin: 0;
-  font-weight: 200;
-  color: #fff;
-`
-
 const Text = styled.p`
   font-family: 'Roboto Mono', monospace;
   color: rgb(151, 151, 151);
@@ -77,35 +71,26 @@ const Text = styled.p`
 `
 
 const AboutCards = () => {
-
-    useEffect(() => {
-        async function getSupply() {
-            let xkrSupply
-
-            //add commas to numbers
+    //State
+    const [supply, setSupply] = useState('')
+        //add commas to numbers
             function numberWithCommas(x) {
                 return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             }
 
             //Get supply from CoinPaprika
-            await fetch("https://blocksum.org/api/v1/supply")
+            fetch("https://blocksum.org/api/v1/supply")
                 .then(res => {
                     if(!res.ok) {
                         throw Error("Couldn't fetch CoinPaprika")
                     } return res.json()
                 })
                 .then(data => {
-                    xkrSupply = (data.supply.current)
+                    setSupply(`${data.supply.current} XKR`)
                 })
                 .catch(err => console.log(err))
-            document.getElementById("circ-supply").textContent = `${numberWithCommas(xkrSupply)} XKR`
-        }
-        getSupply()
-    });
 
     return (
-
-
         <Section>
             <Wrapper>
 
@@ -114,9 +99,8 @@ const AboutCards = () => {
                         <CardTitle>🪙 Max supply</CardTitle>
                         <Text>1,000,000,000 XKR</Text>
                         <CardTitle>🔃 Circulating</CardTitle>
-                        <Text id="circ-supply">-</Text>
+                        <Text id="circ-supply">{numberWithCommas(supply)}</Text>
                     </CardContent>
-
                 </Card>
 
                 <Card>
