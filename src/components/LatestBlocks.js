@@ -115,7 +115,7 @@ const LatestBlocks = () => {
         fetch('https://blocksum.org/api/v1/blocks')
             .then(res => res.json())
             .then(data => {
-                setBlocks(data.blocks.slice(0, 10))
+                setBlocks(data.blocks.slice(0, 5))
             })
 
         const interval = setInterval(() => {
