@@ -6,6 +6,7 @@ import {FaLinux, FaWindows} from "react-icons/all";
 import GenerateConfig from "../page-components/mining/GenerateConfig";
 import Seo from "../components/Seo";
 import Nodestats from "../components/Statusbar/Nodestats";
+import LatestBlocks from "../components/LatestBlocks";
 
 const Section = styled.div`
   overflow: hidden;
@@ -109,6 +110,7 @@ const Hero = () => {
                     </ImageWrapper>
                 </Wrapper>
             </Section>
+            <LatestBlocks/>
             <Nodestats/>
         </Layout>
     )

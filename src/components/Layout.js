@@ -7,7 +7,6 @@ import Contribute from "./footer/Contribute";
 
 import '../theme/animations.css'
 import '../theme/fonts.css'
-import AlertBanner from "./AlertBanner";
 
 
 const Home = ( { children, pageTitle, pageDescription } ) => {
